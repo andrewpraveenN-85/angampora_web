@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <!-- Include Bootstrap and Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+  </head>
+  <body class="page-contact">
+    <!-- Placeholder for Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Page Content -->
+    <main class="bg-white text-black pt-20">
+      <!-- Get in Touch Section -->
+      <section class="py-12 px-6 md:px-12 lg:px-24">
+        <div class="max-w-4xl mx-auto">
+          <!-- Heading -->
+          <h2 class="text-4xl font-bold mb-6">Get in touch</h2>
+          <p class="text-gray-700 mb-10 max-w-xl">
+            Have a question or a project in mind? We’d love to hear from you!
+            Whether it’s a creative collaboration, an inquiry about our
+            services, or just a hello—drop us a line. Our farm at Studio Sisala
+            is ready to bring your vision to life.
+          </p>
+
+          <!-- Contact and Map Container -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Contact Info -->
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold text-lg">Studio Sisala</p>
+                <p>421 Sarnag Mac, Pannipura, 12345</p>
+                <p>
+                  <a href="mailto:hello@jsisala.com" class="underline">
+                    hello@jsisala.com
+                  </a>
+                </p>
+                <p>
+                  <a href="tel:+1234567890" class="underline">
+                    +123 456 7890
+                  </a>
+                </p>
+              </div>
+              <div class="flex items-center space-x-4">
+                <a href="#" class="underline">Facebook</a>
+                <a href="#" class="underline">Instagram</a>
+                <a href="#" class="underline">Twitter</a>
+              </div>
+            </div>
+            <!-- Embedded Map -->
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1978.5753369404922!2d80.00754749325314!3d7.336970350914127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2df9fdbd81cf1%3A0xcd5b101c64b2ae94!2spannala%20Angampora%20traditional%20martial%20art%20school!5e0!3m2!1sen!2slk!4v1742880948713!5m2!1sen!2slk"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="rounded-lg"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Say Hello Section -->
+      <section class="py-12 px-6 md:px-12 lg:px-24">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold mb-6">Say Hello</h2>
+          <p class="text-gray-700 mb-10 max-w-xl">
+            We’d love to hear from you! Whether you have questions, need a
+            quote, or want to discuss your photography needs, we’re here to
+            help. Reach out to us, and let’s create something beautiful
+            together!
+          </p>
+
+          <!-- Contact Form -->
+          <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Name -->
+            <div class="flex flex-col">
+              <label for="name" class="mb-2 font-semibold">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="p-3 rounded border border-gray-300"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <!-- Email -->
+            <div class="flex flex-col">
+              <label for="email" class="mb-2 font-semibold">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="p-3 rounded border border-gray-300"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <!-- Phone (Optional) -->
+            <div class="flex flex-col md:col-span-2">
+              <label for="phone" class="mb-2 font-semibold"
+                >Phone (Optional)</label
+              >
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                class="p-3 rounded border border-gray-300"
+                placeholder="Enter your phone number"
+              />
+            </div>
+
+            <!-- Message -->
+            <div class="flex flex-col md:col-span-2">
+              <label for="message" class="mb-2 font-semibold">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                class="p-3 rounded border border-gray-300"
+                placeholder="Your message here..."
+                required
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="md:col-span-2 flex justify-end">
+              <button
+                type="submit"
+                class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition"
+              >
+                Send message
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Placeholder for Footer -->
+    <div id="footer"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS to load partials -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
