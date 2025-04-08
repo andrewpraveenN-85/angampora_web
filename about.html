@@ -1,49 +1,1271 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/delici/all-demo/Delici-Defoult/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Dec 2024 08:24:09 GMT -->
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
-    <!-- Include Bootstrap and Tailwind CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta charset="utf-8" />
+    <title>Hela Arts Angampora</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.0/dist/tailwind.min.css"
+      rel="shortcut icon"
+      href="images/Ceylon-Hela-Logo.png"
+      type="image/x-icon"
     />
-    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="icon" href="images/Ceylon-Hela-Logo.png" type="image/x-icon" />
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <!--[if lt IE 9
+      ]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script
+    ><![endif]-->
   </head>
-  <body>
-    <!-- Placeholder for Navigation Bar -->
-    <div id="navbar"></div>
 
-    <!-- Page Content -->
-    <main>
-      <!-- Full-Screen Hero Section -->
-      <div class="relative w-full h-screen bg-no-repeat bg-center bg-cover">
-        <!-- Optional Overlay (darken/lighten the image) -->
-        <div
-          class="relative w-full h-screen bg-no-repeat bg-center bg-cover"
-          style="background-image: url('https://www.angampora.com/wp-content/uploads/2019/05/70d41f77457101.5c88338049068.jpg')"
-        >
-          <!-- Hero Text/Content -->
-          <div class="absolute inset-0 flex items-center justify-center">
-            <h1
-              class="text-white text-4xl md:text-6xl font-bold text-center px-4"
-            >
-              Complete Art of <br />
-              Hand to Hand Combat
-            </h1>
+  <body>
+    <style>
+      body{
+        font-family: sans-serif;
+      }
+    </style>
+    <div class="page-wrapper">
+      <!-- Preloader -->
+      <!-- CEYLON Preloader Section Start -->
+      <div id="ceylon-preloader" class="ceylon-preloader-container">
+        <div class="ceylon-close-button" onclick="closeCeylonPreloader()"></div>
+        <div class="ceylon-preloader-content">
+          <div class="ceylon-spinner"></div>
+          <div class="ceylon-letters-wrapper">
+            <span class="ceylon-letter" style="animation-delay: 0.1s">C</span>
+            <span class="ceylon-letter" style="animation-delay: 0.2s">E</span>
+            <span class="ceylon-letter" style="animation-delay: 0.3s">Y</span>
+            <span class="ceylon-letter" style="animation-delay: 0.4s">L</span>
+            <span class="ceylon-letter" style="animation-delay: 0.5s">O</span>
+            <span class="ceylon-letter" style="animation-delay: 0.6s">N</span>
           </div>
+          <div class="ceylon-subtext">Hela Art</div>
         </div>
       </div>
-    </main>
 
-    <!-- Placeholder for Footer -->
-    <div id="footer"></div>
+      <style>
+        /* CEYLON Preloader Styles - Scoped with specific class names */
+        .ceylon-preloader-container {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: #121212; /* Matte black */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 9999;
+          opacity: 1;
+          transition: opacity 0.8s ease-out;
+        }
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS to load partials -->
-    <script src="assets/js/main.js"></script>
+        .ceylon-preloader-container.fade-out {
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        .ceylon-preloader-content {
+          text-align: center;
+        }
+
+        .ceylon-spinner {
+          position: relative;
+          width: 60px;
+          height: 60px;
+          margin: 0 auto 30px;
+        }
+
+        .ceylon-spinner:before {
+          content: "";
+          box-sizing: border-box;
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: 3px solid transparent;
+          border-top-color: #ffffff;
+          animation: ceylon-spin 1s linear infinite;
+        }
+
+        .ceylon-spinner:after {
+          content: "";
+          box-sizing: border-box;
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          top: 10px;
+          left: 10px;
+          border-radius: 50%;
+          border: 3px solid transparent;
+          border-top-color: #6a6a6a;
+          animation: ceylon-spin 0.7s linear infinite reverse;
+        }
+
+        @keyframes ceylon-spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        .ceylon-letters-wrapper {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+
+        .ceylon-letter {
+          display: inline-block;
+          color: #ffffff;
+          font-size: 36px;
+          font-weight: 700;
+          margin: 0 4px;
+          opacity: 0;
+          transform: translateY(20px);
+          animation: ceylon-fadeInUp 2s forwards;
+          letter-spacing: 2px;
+        }
+
+        @keyframes ceylon-fadeInUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .ceylon-subtext {
+          color: #ffffff;
+          font-size: 18px;
+          letter-spacing: 2px;
+          opacity: 0;
+          animation: ceylon-fadeIn 2s 1s forwards;
+        }
+
+        @keyframes ceylon-fadeIn {
+          to {
+            opacity: 1;
+          }
+        }
+
+        .ceylon-close-button {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          z-index: 999;
+        }
+
+        .ceylon-close-button:before,
+        .ceylon-close-button:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: #ffffff;
+          top: 50%;
+        }
+
+        .ceylon-close-button:before {
+          transform: rotate(45deg);
+        }
+
+        .ceylon-close-button:after {
+          transform: rotate(-45deg);
+        }
+      </style>
+
+      <script>
+        // CEYLON Preloader Script - Isolated with unique function names
+        (function () {
+          // Add staggered animation to letters
+          document
+            .querySelectorAll(".ceylon-letter")
+            .forEach((letter, index) => {
+              letter.style.animationDelay = `${0.1 * (index + 1)}s`;
+            });
+
+          // Auto-hide after 5 seconds with fade effect
+          setTimeout(function () {
+            const preloader = document.getElementById("ceylon-preloader");
+            preloader.classList.add("fade-out");
+
+            // Remove from DOM after fade completes
+            setTimeout(function () {
+              preloader.style.display = "none";
+            }, 800); // 800ms matches the fade transition time
+          }, 3000);
+
+          // Make function available globally but with unique name
+          window.closeCeylonPreloader = function () {
+            const preloader = document.getElementById("ceylon-preloader");
+            preloader.classList.add("fade-out");
+
+            // Remove from DOM after fade completes
+            setTimeout(function () {
+              preloader.style.display = "none";
+            }, 800);
+          };
+        })();
+      </script>
+      <!-- CEYLON Preloader Section End -->
+      <!-- Preloader End -->
+
+      <header class="main-header header-down">
+        <div class="header-top">
+          <div class="auto-container">
+            <div class="inner clearfix">
+              <div class="top-left clearfix">
+               
+              </div>
+              <div class="top-right clearfix">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Header Upper -->
+        <div class="header-upper">
+          <div class="auto-container">
+            <!-- Main Box -->
+            <div class="main-box clearfix">
+              <!--Logo-->
+              <div class="logo-box">
+                <div class="logo">
+                  <a
+                    href="index.html"
+                    ><img
+                      src="images/Ceylon-Hela-Logo.png"
+                      width="100px"
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+
+              <div class="nav-box clearfix">
+                <!--Nav Outer-->
+                <div class="nav-outer clearfix">
+                  <nav class="main-menu">
+                    <ul class="navigation clearfix">
+                      <li class=""><a href="index.html">Home</a></li>
+
+                      <li class="current"><a href="about.html">About Us</a></li>
+                      <li class=""><a href="packages.html">Packages</a></li>
+
+                      <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                  </nav>
+                  <!-- Main Menu End-->
+                </div>
+                <!--Nav Outer End-->
+
+                <div class="links-box clearfix">
+                  <div class="link info-toggler">
+                    <button class="info-btn">
+                      <span class="hamburger">
+                        <span class="top-bun"></span>
+                        <span class="meat"></span>
+                        <span class="bottom-bun"></span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Hidden Nav Toggler -->
+                <div class="nav-toggler">
+                  <button class="hidden-bar-opener">
+                    <span class="hamburger">
+                      <span class="top-bun"></span>
+                      <span class="meat"></span>
+                      <span class="bottom-bun"></span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!--Menu Backdrop-->
+      <div class="menu-backdrop"></div>
+
+      <!-- Hidden Navigation Bar -->
+      <section class="hidden-bar">
+        <!-- Hidden Bar Wrapper -->
+        <div class="inner-box">
+          <div class="cross-icon hidden-bar-closer">
+            <span class="far fa-close"></span>
+          </div>
+          <div class="logo-box">
+            <a href="index.html"
+              ><img
+                src="images/Ceylon-Hela-Logo.png"
+                alt=""
+            /></a>
+          </div>
+
+          <!-- .Side-menu -->
+          <div class="side-menu">
+            <ul class="navigation clearfix">
+              <li class=""><a href="index.html">Home</a></li>
+
+              <li class="current"><a href="about.html">About Us</a></li>
+              <li><a href="packages.html">package</a></li>
+
+              <li class=""><a href="contact-us.html">Contact</a></li>
+            </ul>
+          </div>
+          <!-- /.Side-menu -->
+
+          <h2>Visit Us</h2>
+          <ul class="info">
+            <li>
+              pannala Ceylon Hela Art Pvt Ltd <br />Angampora martial art school
+            </li>
+            <li>
+              <a href="mailto:nskylight01@gmail.com">nskylight01@gmail.com</a>
+            </li>
+          </ul>
+          <div class="separator"><span></span></div>
+          <div class="booking-info">
+            <div class="bk-title">Booking request</div>
+            <div class="bk-no">
+              <a href="tel:+88-123-123456"></a>
+            </div>
+          </div>
+        </div>
+        <!-- / Hidden Bar Wrapper -->
+      </section>
+      <!-- / Hidden Bar -->
+
+      <!--Info Back Drop-->
+      <div class="info-back-drop"></div>
+
+      <!-- Hidden Bar -->
+      <section class="info-bar">
+        <div class="inner-box">
+          <div class="cross-icon"><span class="far fa-close"></span></div>
+          <div class="logo-box">
+            <a href="index.html" title=""
+              ><img
+                src="images/Ceylon-Hela-Logo.png"
+                alt=""
+            /></a>
+          </div>
+
+          <h2>Visit Us</h2>
+          <ul class="info">
+            <li>
+              pannala Ceylon Hela Art Pvt Ltd <br />Angampora martial art school
+            </li>
+
+            <a href="mailto:nskylight01@gmail.com">nskylight01@gmail.com</a>
+          </ul>
+          <div class="separator"><span></span></div>
+        </div>
+      </section>
+      <!--End Hidden Bar -->
+
+      <!-- Inner Banner Section -->
+      <section class="inner-banner">
+        <div
+          class="image-layer"
+          style="
+            background-image: url(images/main-slider/IMG-20250407-WA0037.jpg);
+          "
+        ></div>
+        <div class="auto-container">
+          <div class="inner">
+            <div class="subtitle"><span>our story</span></div>
+            <div class="pattern-image">
+              <img src="images/icons/separator.svg" alt="" title="" />
+            </div>
+            <h1><span style="font-family: sans-serif;">About Us</span></h1>
+          </div>
+        </div>
+      </section>
+      <!--End Banner Section -->
+
+      <!--About Section-->
+      <section class="about-section">
+        <div class="left-bg"><img src="" alt="" title="" /></div>
+        <div class="right-bg"><img src="" alt="" title="" /></div>
+        <div class="auto-container">
+          <div class="title-box centered">
+            <div class="subtitle"><span>who we are</span></div>
+            <div class="pattern-image">
+              <img src="images/icons/separator.svg" alt="" title="" />
+            </div>
+            <h3>
+              Angampora is the traditional martial art form that has been
+              shrouded in secrecy since ancient times. Indigenous to Sri Lanka
+              its roots stretch back over<span class="theme_color"
+                >5000 years</span
+              >it was once a very integral part of the Sri Lankan way of life.
+              It is a complete and holistic system, rooted in Buddhism, Hinduism
+              and includes elements of Helaveda, meditation, music and
+              astrology. Forced underground by British rule, Angampora survived
+              due to the dedication of a few gurus and clans who continued to
+              train in secret and has only recently made itself accessible to
+              the general population to learn. This is a tremendous opportunity
+              for those who are interested in becoming part of this fascinating
+              and powerful tradition. And by doing so, help to keep this part of
+              Sri Lankan culture alive.
+            </h3>
+
+            <div class="pattern-image mt-5">
+              <img src="images/icons/separator.svg" alt="" title="" />
+              <h3>
+                Angampora was created as an art of war and of living well. It is
+                crucial to acknowledge these roots to understand the
+                immeasurable value this practice brings to our day-to-day life.
+                In ancient times, warriors trained to protect the dignity and
+                goodness of their people, their land and their way of life.
+                During periods of peace they trained their bodies and minds to
+                perfection, using their creativity and wisdom to serve, inspire
+                and help keep their families and communities strong and healthy
+                on all levels. During times of trouble they were called upon to
+                do whatever was needed to help preserve this balance. It is
+                essential for the warrior to cultivate not only physical fitness
+                but courage, wisdom, fairness, kindness, equanimity and
+                discernment.
+              </h3>
+            </div>
+
+            <div class="pattern-image">
+              <img src="images/icons/separator.svg" alt="" title="" />
+              <h3>
+                The practice provides a unique psycho-physical framework. It
+                enables the practitioner to physically experience real life
+                encounters in a safe environment, thereby re-patterning
+                dysfunctional and habitual physical and emotional reactions to
+                threat, stress, fear, anger and other difficult conditions. This
+                will help the practitioner to have greater equanimity and over
+                time help to deactivate some of the emotional triggers that
+                cause suffering in their lives.When we stand our ground, we
+                stand firm, non-attached and fully engaged in the present
+                moment.
+              </h3>
+            </div>
+
+            <div class="pattern-image">
+              <img src="images/icons/separator.svg" alt="" title="" />
+              <h3>
+                The practice of Angampora is a way to cultivate the warrior
+                spirit within. It is a way to learn how to be strong, flexible,
+                courageous and wise. It is a way to learn how to be a good
+                friend, partner, parent and community member. It is a way to
+                learn how to be a good leader and teacher. It is a way to learn
+                how to be a good student. It is a way to learn how to be a good
+                human being.
+              </h3>
+              </h3>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <!--Block-->
+            <div
+              class="about-block content-block col-xl-4 col-lg-4 col-md-6 col-sm-12"
+            >
+              <div
+                class="inner-box wow fadeInUp"
+                data-wow-duration="1500ms"
+                data-wow-delay="0ms"
+              >
+                <div class="text">
+                  This business plan ensures that our Angampora training
+                  programs not only preserve Sri Lanka’s rich martial arts
+                  heritage but also promote its cultural legacy worldwide.
+                  Through Ceylon Hela Art, we aim to expand beyond Angampora and
+                  introduce more Sri Lankan traditions to the global stage
+                </div>
+                <!-- <div class="signature"><img src="images/resource/signature-1.png" alt="" title=""></div> -->
+                <!-- <div class="author">andrew joe - founder</div> -->
+                <div class="video-box">
+                  <div class="image">
+                    <a
+                      href="https://www.youtube.com/@ceylonhelaart"
+                      class="lightbox-image"
+                      ><img
+                        src="images/background/Screenshot 2025-04-08 083713.png"
+                        alt=""
+                    /></a>
+                    <a
+                      href="https://www.youtube.com/@ceylonhelaart"
+                      class="lightbox-image play-btn"
+                      ><span class="icon fal fa-play"
+                        ><i class="ripple"></i></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Block-->
+            <div
+              class="about-block image-block col-xl-4 col-lg-4 col-md-6 col-sm-12"
+            >
+              <div
+                class="inner-box wow fadeInUp"
+                data-wow-duration="1500ms"
+                data-wow-delay="300ms"
+              >
+                <div class="image">
+                  <img src="images/background/IMG-20250407-WA0006.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <!--Block-->
+            <div
+              class="about-block info-block col-xl-4 col-lg-4 col-md-12 col-sm-12"
+            >
+              <div
+                class="inner-box wow fadeInUp"
+                data-wow-duration="1500ms"
+                data-wow-delay="600ms"
+              >
+                <ul class="info">
+                  <li>
+                    <strong>One-Week Course</strong>Focuses on body control,
+                    breathing techniques, rhythm, and flexibility. Includes
+                    yoga, meditation and traditional lessons.
+                  </li>
+                  <li>
+                    <strong>Mind-Body Connection & Group Dynamics</strong>Covers
+                    traditional methods and cultural heritage.
+                  </li>
+                  <li class="separator"><span></span></li>
+                  <li>
+                    <strong>Contact Us</strong
+                    ><span class="address">
+                      pannala Ceylon Hela Art Pvt Ltd Angampora martial art
+                      school</span
+                    >
+                    <a href="tel:+94769801692">+94 76-980-1692</a> <br /><a
+                      href="mailto:nskylight01@gmail.com"
+                      >nskylight01@gmail.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="fact-counter">
+            <div class="row clearfix">
+              <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                <div class="inner clearfix">
+                  <div class="fact-count">
+                    <div class="count-box">
+                      <span class="count-text" data-stop="150" data-speed="2000"
+                        >0</span
+                      ><i>+</i>
+                    </div>
+                  </div>
+                  <div class="fact-title">studets</div>
+                </div>
+              </div>
+              <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                <div class="inner clearfix">
+                  <div class="fact-count">
+                    <div class="count-box">
+                      <span class="count-text" data-stop="82" data-speed="1500"
+                        >0</span
+                      ><i>+</i>
+                    </div>
+                  </div>
+                  <div class="fact-title">Teachers</div>
+                </div>
+              </div>
+              <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                <div class="inner clearfix">
+                  <div class="fact-count">
+                    <div class="count-box">
+                      <span class="count-text" data-stop="35" data-speed="1000"
+                        >0</span
+                      ><i>+</i>
+                    </div>
+                  </div>
+                  <div class="fact-title">Competition</div>
+                </div>
+              </div>
+              <div class="fact-block col-lg-3 col-md-6 col-sm-12">
+                <div class="inner clearfix">
+                  <div class="fact-count">
+                    <div class="count-box">
+                      <span class="count-text" data-stop="10" data-speed="1000"
+                        >0</span
+                      ><i>+</i>
+                    </div>
+                  </div>
+                  <div class="fact-title">awards</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Fluid Section-->
+      <section class="fluid-section">
+        <div class="outer-container">
+          <div class="row clearfix">
+            <!--Col-->
+            <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+              <div
+                class="inner wow fadeInLeft"
+                data-wow-duration="1500ms"
+                data-wow-delay="0ms"
+              >
+                <div
+                  class="image-layer"
+                  style="
+                    background-image: url(images/main-slider/IMG-20250407-WA0035.jpg);
+                  "
+                ></div>
+                <div class="image">
+                  <img
+                    src="images/main-slider/IMG-20250407-WA0035.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <!--Col-->
+            <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+              <div class="right-bg"><img src="" alt="" title="" /></div>
+              <div
+                class="inner clearfix wow fadeInRight"
+                data-wow-duration="1500ms"
+                data-wow-delay="0ms"
+              >
+                <div class="content-box">
+                  <div class="title-box centered">
+                    <div class="subtitle">
+                      <span>35 year of experience</span>
+                    </div>
+                    <div class="pattern-image">
+                      <img src="images/icons/separator.svg" alt="" title="" />
+                    </div>
+                    <h2>Master</h2>
+                    <div class="text">
+                      Lorem Ipsum is simply dummy text of the printingand
+                      typesetting industry lorem Ipsum has been the industrys
+                      standard dummy text ever since the when an unknown printer
+                      took a galley of type.
+                    </div>
+                  </div>
+
+                  <div class="link-box">
+                    <a href="" class="theme-btn btn-style-two clearfix">
+                      <span class="btn-wrap">
+                        <span class="text-one">meet our team</span>
+                        <span class="text-two">meet our team</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Fluid Section-->
+      <section class="fluid-section alternate">
+        <div class="outer-container">
+          <div class="row clearfix">
+            <!--Col-->
+            <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+              <div
+                class="inner wow fadeInLeft"
+                data-wow-duration="1500ms"
+                data-wow-delay="0ms"
+              >
+                <div
+                  class="image-layer"
+                  style="
+                    background-image: url(images/main-slider/IMG-20250407-WA0034.jpg);
+                  "
+                ></div>
+                <div class="image">
+                  <img
+                    src="images/main-slider/IMG-20250407-WA0034.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <!--Col-->
+            <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+              <div class="left-bg"><img src="" alt="" title="" /></div>
+              <div
+                class="inner clearfix wow fadeInRight"
+                data-wow-duration="1500ms"
+                data-wow-delay="0ms"
+              >
+                <div class="content-box">
+                  <div class="title-box centered">
+                    <div class="subtitle"><span>Experience</span></div>
+                    <div class="pattern-image">
+                      <img src="images/icons/separator.svg" alt="" title="" />
+                    </div>
+                    <h2></h2>
+                    <div class="text">
+                      Lorem Ipsum is simply dummy text of the printingand
+                      typesetting industry lorem Ipsum has been the industrys
+                      standard dummy text ever since the when an unknown printer
+                      took a galley of type.
+                    </div>
+                  </div>
+                  <div class="link-box">
+                    <a href="" class="theme-btn btn-style-two clearfix">
+                      <span class="btn-wrap">
+                        <span class="text-one">Discover Now</span>
+                        <span class="text-two">Discover Now</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        #about-section * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Poppins", "Arial", sans-serif;
+        }
+
+        #about-section {
+          background: linear-gradient(135deg, #000000, #000000);
+          color: #dca06d;
+          padding: 4rem 2rem;
+          position: relative;
+          overflow: hidden;
+          border-radius: 8px;
+        }
+
+        #about-section::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23DCA06D' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+          z-index: 0;
+        }
+
+        #about-section .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 1;
+        }
+
+        #about-section .header {
+          text-align: center;
+          margin-bottom: 3rem;
+          position: relative;
+        }
+
+        #about-section .header::after {
+          content: "";
+          display: block;
+          width: 80px;
+          height: 4px;
+          background: linear-gradient(90deg, #a55b4b, #dca06d);
+          margin: 1.5rem auto 0;
+        }
+
+        #about-section h2 {
+          font-size: 2.5rem;
+          margin-bottom: 0.5rem;
+          background: linear-gradient(90deg, #cd7e6d, #dca06d);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+          display: inline-block;
+        }
+
+        #about-section .intro {
+          font-size: 1.2rem;
+          font-weight: 300;
+          margin-bottom: 1rem;
+          color: #dca06d;
+        }
+
+        #about-section .content {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+        }
+
+        #about-section .mission-box {
+          background: rgba(33, 15, 55, 0.7);
+          border-radius: 12px;
+          padding: 2rem;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+          border: 1px solid rgba(79, 28, 81, 0.5);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #about-section .mission-box:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+          border-color: #a55b4b;
+        }
+
+        #about-section .mission-title {
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+          color: #a55b4b;
+          position: relative;
+          padding-bottom: 0.5rem;
+        }
+
+        #about-section .mission-title::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 50px;
+          height: 2px;
+          background: linear-gradient(90deg, #a55b4b, #dca06d);
+        }
+
+        #about-section .mission-text {
+          font-size: 1rem;
+          line-height: 1.7;
+          color: #ffffff;
+        }
+
+        #about-section .footer-text {
+          text-align: center;
+          margin-top: 3rem;
+          font-style: italic;
+          color: #ffffff;
+          padding: 1rem;
+          background: rgba(33, 15, 55, 0.6);
+          border-radius: 8px;
+          font-size: 1.1rem;
+          border-left: 4px solid #a55b4b;
+        }
+
+        @media (max-width: 768px) {
+          #about-section {
+            padding: 3rem 1.5rem;
+          }
+
+          #about-section h2 {
+            font-size: 2rem;
+          }
+
+          #about-section .intro {
+            font-size: 1rem;
+          }
+
+          #about-section .content {
+            grid-template-columns: 1fr;
+          }
+        }
+      </style>
+      <section id="about-section">
+        <div class="container">
+          <div class="header">
+            <h2>ආයුබෝවන්</h2>
+            <p class="text-white">
+              Ceylon Hela Art (Pvt) Ltd වෙත ඔබව සාදරයෙන් පිලිගනිමු
+            </p>
+          </div>
+
+          <div class="content">
+            <div class="mission-box">
+              <h3 class="mission-title">අපගේ දැක්ම</h3>
+              <p class="mission-text">
+                ශ්‍රී ලාංකීය සාම්ප්‍රදායික උරුමයන්ගේ සංරක්ෂණය සහ ප්‍රවර්ධනය
+                උදෙසා කැපවී සිටින අප ආ‍යතනය අපගේ අංගම්පොර පුහුණු ජාතික උරැමයේ
+                අක්මුල් සේම මුදුන් මල්කඩ වූ හෙළ ශාසණය මනෑකොට ප්‍රථිස්ඨාපනය
+                කරැලීමට හැකි වීම.
+              </p>
+            </div>
+
+            <div class="mission-box">
+              <h3 class="mission-title">අපගේ අරමුණ</h3>
+              <p class="mission-text">
+                ප්‍රථිපත්තිගරුක නීරෝගී සෘජු සුඛිත මුදිත මානවයකු බිහිකරලීමට අවකාස
+                සැලසීම. හෙල හදවතට ප්‍රතිබද්ධ වර්තමානයෙහි අඛන්ඩ උනන්දුව වූද ජාතික
+                උරුමය වූද ජාතික ආරක්ෂාවේ මුදුන් මුල වූද පෞරාණික හෙල හරඹ
+                ශාස්ත්‍රය සංරක්ෂණය වීම.
+              </p>
+            </div>
+
+            <div class="mission-box">
+              <h3 class="mission-title">අපගේ ප්‍රතිඵල</h3>
+              <p class="mission-text">
+                තියුනු සම්පරීක්ෂන වය්‍යවස්ථාපන ක්‍රියාවලියකින් පසු තෝරා පුහුනු
+                කරණලද තරුණ පුරාණ අංගං ශිල්පීන් /උපදේසකයින්ගේ සංචිතය චිරාත්
+                කාලයකට ලක්දිව ස්ථාපනය වීම. ස්වයං ආරක්ෂාව, ශාරීරික යෝග්‍යතාවය,
+                මානසික විනය සහ අධ්‍යාත්මික වර්ධනය ඒකාබද්ධ කරමින් අනාගතයේදී,
+                අනෙකුත් ශ්‍රී ලාංකීය සාම්ප්‍රදායික කලා ලෝකයට හඳුන්වා දීමට අපි
+                අපේක්ෂා කරන බව සතුටින් දැනුම්දෙමු...
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-text">
+            රට දැය සමය රක්ෂා කරණ ධීර වීර බලැති පින්වත් යෝධ පුතුන්ගෙන් සුසැදි යුධ
+            හමුදාව තුල මෙන්ම බාහිර සමාජය තුලද සෘජු විනයානුකූල ස්වයංපෝෂිත
+            අධය්‍යාත්මයක් සහිත හෙළ දූපුතුනගෙ මග වූ ආර්ය අෂ්ඨාංගික මග යන අංගං
+            ඉලංගං හරඹ ශිල්පී ගුරු උපදේසක පරම්පරාවක් බිහිකර ගැනුමට මග විවර වේ
+          </div>
+        </div>
+      </section>
+
+      <!--Gallery Section-->
+      <section class="image-gallery">
+        <div class="carousel-box">
+          <div class="auto-container">
+            <div class="image-gallery-slider owl-theme owl-carousel">
+              <!--Slide Item-->
+              <div class="gallery-block">
+                <div class="image">
+                  <a
+                    href="images/main-slider/IMG-20250407-WA0034.jpg"
+                    class="lightbox-image"
+                    data-fancybox="gallery"
+                    ><img
+                      src="images/main-slider/IMG-20250407-WA0034.jpg"
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+
+              <!--Slide Item-->
+              <div class="gallery-block">
+                <div class="image">
+                  <a
+                    href="images/main-slider/IMG-20250407-WA0034.jpg"
+                    class="lightbox-image"
+                    data-fancybox="gallery"
+                    ><img
+                      src="images/main-slider/IMG-20250407-WA0034.jpg"
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+
+              <!--Slide Item-->
+              <div class="gallery-block">
+                <div class="image">
+                  <a
+                    href="images/main-slider/IMG-20250407-WA0034.jpg"
+                    class="lightbox-image"
+                    data-fancybox="gallery"
+                    ><img
+                      src="images/main-slider/IMG-20250407-WA0034.jpg"
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+
+              <!--Slide Item-->
+              <div class="gallery-block">
+                <div class="image">
+                  <a
+                    href="images/main-slider/IMG-20250407-WA0034.jpg"
+                    class="lightbox-image"
+                    data-fancybox="gallery"
+                    ><img
+                      src="images/main-slider/IMG-20250407-WA0034.jpg"
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+
+              <!--Slide Item-->
+              <div class="gallery-block">
+                <div class="image">
+                  <a
+                    href="images/main-slider/IMG-20250407-WA0034.jpg"
+                    class="lightbox-image"
+                    data-fancybox="gallery"
+                    ><img
+                      src="images/main-slider/IMG-20250407-WA0034.jpg"
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+
+              <!--Slide Item-->
+              <div class="gallery-block">
+                <div class="image">
+                  <a
+                    href="images/main-slider/IMG-20250407-WA0034.jpg"
+                    class="lightbox-image"
+                    data-fancybox="gallery"
+                    ><img
+                      src="images/main-slider/IMG-20250407-WA0034.jpg"
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Main Footer-->
+      <style>
+        /* Reset and general styles */
+       
+        
+        /* Sample content section (to demonstrate footer stays at bottom) */
+        
+        /* Footer styles */
+        .footer {
+          background-color: #222;
+          color: #fff;
+          padding: 40px 0;
+          width: 100%;
+        }
+        
+        .footer-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+        }
+        
+        .footer-col h3 {
+          color: #fff;
+          font-size: 18px;
+          margin-bottom: 20px;
+          position: relative;
+          padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 50px;
+          height: 2px;
+          background-color: #4e6bff;
+        }
+        
+        .footer-col p {
+          color: #aaa;
+          margin-bottom: 15px;
+          font-size: 14px;
+        }
+        
+        .footer-links li {
+          list-style: none;
+          margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+          color: #aaa;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          font-size: 14px;
+        }
+        
+        .footer-links a:hover {
+          color: #4e6bff;
+          padding-left: 5px;
+        }
+        
+        .social-links {
+          display: flex;
+          gap: 15px;
+          margin-top: 20px;
+        }
+        
+        .social-links a {
+          display: inline-flex;
+          width: 40px;
+          height: 40px;
+          background-color: #333;
+          border-radius: 50%;
+          color: #fff;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+          text-decoration: none;
+        }
+        
+        .social-links a:hover {
+          background-color: #4e6bff;
+          transform: translateY(-3px);
+        }
+        
+        .contact-info li {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          margin-bottom: 15px;
+          color: #aaa;
+          list-style: none;
+          font-size: 14px;
+        }
+        
+        .newsletter input {
+          width: 100%;
+          padding: 12px;
+          background-color: #333;
+          border: none;
+          color: #fff;
+          margin-bottom: 15px;
+          border-radius: 4px;
+        }
+        
+        .newsletter button {
+          padding: 12px 20px;
+          background-color: #4e6bff;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          border-radius: 4px;
+          transition: all 0.3s ease;
+        }
+        
+        .newsletter button:hover {
+          background-color: #3a56e8;
+        }
+        
+        .footer-bottom {
+          text-align: center;
+          padding-top: 30px;
+          margin-top: 30px;
+          border-top: 1px solid #444;
+          color: #888;
+          font-size: 14px;
+        }
+        
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+          .footer-container {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+          }
+        }
+        
+        @media screen and (max-width: 480px) {
+          .footer-container {
+            grid-template-columns: 1fr;
+          }
+          
+          .footer-col {
+            margin-bottom: 30px;
+          }
+        }
+      </style>
+      <!-- Sample content section -->
+    
+      
+      <!-- Footer section -->
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h3 style="font-family: sans-serif;">About Us</h3>
+            <p>
+                Ceylon Hela Art (Pvt) Ltd වෙත ඔබව සාදරයෙන් පිලිගනිමු. අපගේ
+                ආයතනය ශ්‍රී ලාංකීය සාම්ප්‍රදායික උරුමයන්ගේ සංරක්ෂණය සහ
+                ප්‍රවර්ධනය උදෙසා කැපවී සිටී.
+            </p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/share/16KH2W36DM/?mibextid=wwXIfr"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+              </svg></a>
+              <a href="https://www.instagram.com/ceylon_helaart?igsh=MXhweHV1azhuY3NwcA%3D%3D&utm_source=qr"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              </svg></a>
+              <a href="https://youtube.com/@ceylonhelaart?si=jWx06iqwULSTArTR"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+              </svg></a>
+              <a href="http://wa.me/94761346094"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+              </svg></a>
+              <a href="https://www.tiktok.com/@ceylon.helaart?_t=ZS-8v6GbjMc3sH&_r=1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+              </svg></a>
+            </div>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="packages.html">packages</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Contact Info</h3>
+            <ul class="contact-info">
+              <li><i class="fa fa-map-marker"></i>pannala Ceylon Hela Art Pvt Ltd Angampora martial art school</li>
+              <li><i class="fa fa-phone"></i> +9476 980 1692</li>
+              <li><i class="fa fa-envelope"></i>nskylight01@gmail.com</li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter to receive updates and news.</p>
+            <div class="newsletter">
+              <input type="email" placeholder="Your Email Address">
+              <button>Subscribe</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2025 JAAN NETWORK. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    <!--End pagewrapper-->
+
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html">
+      <span class="icon fa fa-angle-up"></span>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/custom-script.js"></script>
   </body>
+
+  <!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/delici/all-demo/Delici-Defoult/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Dec 2024 08:24:35 GMT -->
 </html>
