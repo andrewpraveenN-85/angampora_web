@@ -28,7 +28,16 @@
     <div class="page-wrapper">
       <!-- CEYLON Preloader Section Start -->
       <div id="ceylon-preloader" class="ceylon-preloader-container">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="ceylon-video-background">
+          <source src="images/loader.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      
+        <!-- Close Button -->
         <div class="ceylon-close-button" onclick="closeCeylonPreloader()"></div>
+      
+        <!-- Preloader Content -->
         <div class="ceylon-preloader-content">
           <div class="ceylon-spinner"></div>
           <div class="ceylon-letters-wrapper">
@@ -42,40 +51,52 @@
           <div class="ceylon-subtext">Hela Art</div>
         </div>
       </div>
-
+      
+      <!-- Preloader Styles -->
       <style>
-        /* CEYLON Preloader Styles - Scoped with specific class names */
         .ceylon-preloader-container {
           position: fixed;
           width: 100%;
           height: 100%;
           top: 0;
           left: 0;
-          background-color: #121212; /* Matte black */
+          background-color: #121212;
           display: flex;
           justify-content: center;
           align-items: center;
           z-index: 9999;
           opacity: 1;
           transition: opacity 0.8s ease-out;
+          overflow: hidden;
         }
-
+      
         .ceylon-preloader-container.fade-out {
           opacity: 0;
           pointer-events: none;
         }
-
+      
+        .ceylon-video-background {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -1;
+          opacity: 0.25;
+        }
+      
         .ceylon-preloader-content {
           text-align: center;
         }
-
+      
         .ceylon-spinner {
           position: relative;
           width: 60px;
           height: 60px;
           margin: 0 auto 30px;
         }
-
+      
         .ceylon-spinner:before {
           content: "";
           box-sizing: border-box;
@@ -87,7 +108,7 @@
           border-top-color: #ffffff;
           animation: ceylon-spin 1s linear infinite;
         }
-
+      
         .ceylon-spinner:after {
           content: "";
           box-sizing: border-box;
@@ -101,7 +122,7 @@
           border-top-color: #6a6a6a;
           animation: ceylon-spin 0.7s linear infinite reverse;
         }
-
+      
         @keyframes ceylon-spin {
           0% {
             transform: rotate(0deg);
@@ -110,13 +131,13 @@
             transform: rotate(360deg);
           }
         }
-
+      
         .ceylon-letters-wrapper {
           display: flex;
           justify-content: center;
           margin-bottom: 20px;
         }
-
+      
         .ceylon-letter {
           display: inline-block;
           color: #ffffff;
@@ -128,14 +149,14 @@
           animation: ceylon-fadeInUp 2s forwards;
           letter-spacing: 2px;
         }
-
+      
         @keyframes ceylon-fadeInUp {
           to {
             opacity: 1;
             transform: translateY(0);
           }
         }
-
+      
         .ceylon-subtext {
           color: #ffffff;
           font-size: 18px;
@@ -143,13 +164,13 @@
           opacity: 0;
           animation: ceylon-fadeIn 2s 1s forwards;
         }
-
+      
         @keyframes ceylon-fadeIn {
           to {
             opacity: 1;
           }
         }
-
+      
         .ceylon-close-button {
           position: absolute;
           top: 20px;
@@ -159,7 +180,7 @@
           cursor: pointer;
           z-index: 999;
         }
-
+      
         .ceylon-close-button:before,
         .ceylon-close-button:after {
           content: "";
@@ -169,49 +190,44 @@
           background-color: #ffffff;
           top: 50%;
         }
-
+      
         .ceylon-close-button:before {
           transform: rotate(45deg);
         }
-
+      
         .ceylon-close-button:after {
           transform: rotate(-45deg);
         }
       </style>
-
+      
+      <!-- Preloader Script -->
       <script>
-        // CEYLON Preloader Script - Isolated with unique function names
         (function () {
-          // Add staggered animation to letters
-          document
-            .querySelectorAll(".ceylon-letter")
-            .forEach((letter, index) => {
-              letter.style.animationDelay = `${0.1 * (index + 1)}s`;
-            });
-
-          // Auto-hide after 5 seconds with fade effect
+          // Add staggered animation delay
+          document.querySelectorAll(".ceylon-letter").forEach((letter, index) => {
+            letter.style.animationDelay = `${0.1 * (index + 1)}s`;
+          });
+      
+          // Auto-hide after 3 seconds
           setTimeout(function () {
             const preloader = document.getElementById("ceylon-preloader");
             preloader.classList.add("fade-out");
-
-            // Remove from DOM after fade completes
             setTimeout(function () {
               preloader.style.display = "none";
-            }, 800); // 800ms matches the fade transition time
+            }, 800);
           }, 3000);
-
-          // Make function available globally but with unique name
+      
+          // Close function
           window.closeCeylonPreloader = function () {
             const preloader = document.getElementById("ceylon-preloader");
             preloader.classList.add("fade-out");
-
-            // Remove from DOM after fade completes
             setTimeout(function () {
               preloader.style.display = "none";
             }, 800);
           };
         })();
       </script>
+      
       <!-- CEYLON Preloader Section End -->
 
       <header class="main-header header-down">
@@ -253,6 +269,8 @@
                       <li class=""><a href="index.html">Home</a></li>
 
                       <li class=""><a href="about.html">About Us</a></li>
+                      <li class=""><a href="masters.html">Our Masters</a></li>
+
                       <li class=""><a href="packages.html">Packages</a></li>
 
                       <li class="current">
@@ -316,6 +334,8 @@
               <li class=""><a href="index.html">Home</a></li>
 
               <li><a href="about.html">About Us</a></li>
+              <li class=""><a href="masters.html">Our Masters</a></li>
+
               <li><a href="packages.html">package</a></li>
 
               <li class="current"><a href="contact-us.html">Contact</a></li>
@@ -810,6 +830,8 @@
             <ul class="footer-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About Us</a></li>
+              <li class=""><a href="masters.html">Our Masters</a></li>
+
               <li><a href="packages.html">packages</a></li>
               <li><a href="contact-us.html">Contact Us</a></li>
             </ul>
