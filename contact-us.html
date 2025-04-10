@@ -33,10 +33,10 @@
           <source src="images/202504090917.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      
+
         <!-- Close Button -->
         <div class="ceylon-close-button" onclick="closeCeylonPreloader()"></div>
-      
+
         <!-- Preloader Content -->
         <div class="ceylon-preloader-content">
           <div class="ceylon-spinner"></div>
@@ -51,7 +51,7 @@
           <div class="ceylon-subtext">Hela Art</div>
         </div>
       </div>
-      
+
       <!-- Preloader Styles -->
       <style>
         .ceylon-preloader-container {
@@ -69,12 +69,12 @@
           transition: opacity 0.8s ease-out;
           overflow: hidden;
         }
-      
+
         .ceylon-preloader-container.fade-out {
           opacity: 0;
           pointer-events: none;
         }
-      
+
         .ceylon-video-background {
           position: absolute;
           top: 0;
@@ -85,18 +85,18 @@
           z-index: -1;
           opacity: 0.25;
         }
-      
+
         .ceylon-preloader-content {
           text-align: center;
         }
-      
+
         .ceylon-spinner {
           position: relative;
           width: 60px;
           height: 60px;
           margin: 0 auto 30px;
         }
-      
+
         .ceylon-spinner:before {
           content: "";
           box-sizing: border-box;
@@ -108,7 +108,7 @@
           border-top-color: #ffffff;
           animation: ceylon-spin 1s linear infinite;
         }
-      
+
         .ceylon-spinner:after {
           content: "";
           box-sizing: border-box;
@@ -122,7 +122,7 @@
           border-top-color: #6a6a6a;
           animation: ceylon-spin 0.7s linear infinite reverse;
         }
-      
+
         @keyframes ceylon-spin {
           0% {
             transform: rotate(0deg);
@@ -131,13 +131,13 @@
             transform: rotate(360deg);
           }
         }
-      
+
         .ceylon-letters-wrapper {
           display: flex;
           justify-content: center;
           margin-bottom: 20px;
         }
-      
+
         .ceylon-letter {
           display: inline-block;
           color: #ffffff;
@@ -149,14 +149,14 @@
           animation: ceylon-fadeInUp 2s forwards;
           letter-spacing: 2px;
         }
-      
+
         @keyframes ceylon-fadeInUp {
           to {
             opacity: 1;
             transform: translateY(0);
           }
         }
-      
+
         .ceylon-subtext {
           color: #ffffff;
           font-size: 18px;
@@ -164,13 +164,13 @@
           opacity: 0;
           animation: ceylon-fadeIn 2s 1s forwards;
         }
-      
+
         @keyframes ceylon-fadeIn {
           to {
             opacity: 1;
           }
         }
-      
+
         .ceylon-close-button {
           position: absolute;
           top: 20px;
@@ -180,7 +180,7 @@
           cursor: pointer;
           z-index: 999;
         }
-      
+
         .ceylon-close-button:before,
         .ceylon-close-button:after {
           content: "";
@@ -190,24 +190,26 @@
           background-color: #ffffff;
           top: 50%;
         }
-      
+
         .ceylon-close-button:before {
           transform: rotate(45deg);
         }
-      
+
         .ceylon-close-button:after {
           transform: rotate(-45deg);
         }
       </style>
-      
+
       <!-- Preloader Script -->
       <script>
         (function () {
           // Add staggered animation delay
-          document.querySelectorAll(".ceylon-letter").forEach((letter, index) => {
-            letter.style.animationDelay = `${0.1 * (index + 1)}s`;
-          });
-      
+          document
+            .querySelectorAll(".ceylon-letter")
+            .forEach((letter, index) => {
+              letter.style.animationDelay = `${0.1 * (index + 1)}s`;
+            });
+
           // Auto-hide after 3 seconds
           setTimeout(function () {
             const preloader = document.getElementById("ceylon-preloader");
@@ -216,7 +218,7 @@
               preloader.style.display = "none";
             }, 800);
           }, 3000);
-      
+
           // Close function
           window.closeCeylonPreloader = function () {
             const preloader = document.getElementById("ceylon-preloader");
@@ -227,19 +229,15 @@
           };
         })();
       </script>
-      
+
       <!-- CEYLON Preloader Section End -->
 
       <header class="main-header header-down">
         <div class="header-top">
           <div class="auto-container">
             <div class="inner clearfix">
-              <div class="top-left clearfix">
-                
-              </div>
-              <div class="top-right clearfix">
-                
-              </div>
+              <div class="top-left clearfix"></div>
+              <div class="top-right clearfix"></div>
             </div>
           </div>
         </div>
@@ -251,8 +249,7 @@
               <!--Logo-->
               <div class="logo-box">
                 <div class="logo">
-                  <a
-                    href="index.html"
+                  <a href="index.html"
                     ><img
                       src="images/Ceylon-Hela-Logo.png"
                       width="100px"
@@ -321,10 +318,8 @@
             <span class="far fa-close"></span>
           </div>
           <div class="logo-box">
-            <a href="index.html" 
-              ><img
-                src="images/Ceylon-Hela-Logo.png"
-                alt=""
+            <a href="index.html"
+              ><img src="images/Ceylon-Hela-Logo.png" alt=""
             /></a>
           </div>
 
@@ -356,7 +351,7 @@
           <div class="booking-info">
             <div class="bk-title">Booking request</div>
             <div class="bk-no">
-              <a href="tel:+88-123-123456"></a>
+              <a href="tel:+94761346094">+94761346094</a>
             </div>
           </div>
         </div>
@@ -373,9 +368,7 @@
           <div class="cross-icon"><span class="far fa-close"></span></div>
           <div class="logo-box">
             <a href="index.html" title=""
-              ><img
-                src="images/Ceylon-Hela-Logo.png"
-                alt=""
+              ><img src="images/Ceylon-Hela-Logo.png" alt=""
             /></a>
           </div>
 
@@ -463,7 +456,7 @@
                       school<br />Email : nskylight01@gmail.com
                     </div>
                     <div class="more-link">
-                      <a href="#">Booking : +94769801692</a>
+                      <a href="#">Booking : +94761346094</a>
                     </div>
                   </div>
                 </div>
@@ -748,26 +741,15 @@
           <div class="footer-col">
             <h3>About Us</h3>
             <p>
-                Ceylon Hela Art is a martial arts school that specializes in
-                Angampora, a traditional Sri Lankan martial art. We offer
-                comprehensive training programs for all ages and skill levels,
-                focusing on self-defense, fitness, and cultural heritage.
+              Ceylon Hela Art is a martial arts school that specializes in
+              Angampora, a traditional Sri Lankan martial art. We offer
+              comprehensive training programs for all ages and skill levels,
+              focusing on self-defense, fitness, and cultural heritage.
             </p>
             <div class="social-links">
-              <a
-                href="https://www.facebook.com/share/16KH2W36DM/?mibextid=wwXIfr"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-facebook"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
-                  /></svg
-              ></a>
+              <a href="https://www.facebook.com/share/18Y1FjKQCm/?mibextid=wwXIfr"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+              </svg></a>
               <a
                 href="https://www.instagram.com/ceylon_helaart?igsh=MXhweHV1azhuY3NwcA%3D%3D&utm_source=qr"
                 ><svg
@@ -882,5 +864,4 @@
     <script src="js/wow.js"></script>
     <script src="js/custom-script.js"></script>
   </body>
-
 </html>
