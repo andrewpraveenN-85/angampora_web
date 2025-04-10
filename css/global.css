@@ -94,7 +94,7 @@
   /* Fonts Variable */
   --font-family-DMsans: 'DM Sans', sans-serif;
   
-  --font-family-Forum: 'Forum', cursive;
+  --font-family-Forum: 'Forum', sans-serif;
   
 /* Heading Fonts */
   
@@ -439,7 +439,7 @@
  ***/
 
 body {
-    font-family: var(--font-family-DMsans);
+    font-family: Arial, Helvetica, sans-serif;
     font-size:var(--font-16);
     color:var(--text-color);
     background: var(--body-bg-color);
@@ -477,7 +477,7 @@ h1,h2,h3,h4,h5,h6 {
     background:none;
     line-height: 1.20em;
     color:var(--heading-color);
-    font-family:var(--font-family-Forum);
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .theme_color{
@@ -518,7 +518,7 @@ h6{
 }
 
 input,select,button{
-    font-family: var(--font-family-DMsans);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 textarea{
