@@ -23,6 +23,15 @@
     <!--[if lt IE 9
       ]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script
     ><![endif]-->
+
+    <style>
+      .goog-te-banner-frame.skiptranslate {
+          display: none !important;
+      }
+      body {
+          top: 0px !important;
+      }
+  </style>
   </head>
 
   <body>
@@ -238,6 +247,22 @@
       <!-- Preloader End -->
 
       <header class="main-header header-down">
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+          function googleTranslateElementInit() {
+              new google.translate.TranslateElement(
+                  {
+                      pageLanguage: 'en',  // Your website's base language
+                      includedLanguages: 'en,ta,si',
+                      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                  },
+                  'google_translate_element'
+              );
+          }
+      </script>
+      
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
         <div class="header-top">
           <div class="auto-container">
             <div class="inner clearfix">
