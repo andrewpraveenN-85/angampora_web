@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/delici/all-demo/Delici-Defoult/our-chef.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Dec 2024 08:25:12 GMT -->
+  <!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/delici/all-demo/Delici-Defoult/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Dec 2024 08:18:44 GMT -->
   <head>
     <meta charset="utf-8" />
     <title>Hela Arts Angampora</title>
@@ -12,6 +12,10 @@
       href="images/Ceylon-Hela-Logo.png"
       type="image/x-icon"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+
+<!-- Your Custom Styles -->
     <link rel="icon" href="images/Ceylon-Hela-Logo.png" type="image/x-icon" />
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -24,9 +28,11 @@
       ]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script
     ><![endif]-->
   </head>
-  <body style="font-family: sans-serif;">
+
+  <body>
     <div class="page-wrapper">
-      <!-- CEYLON Preloader Section Start -->
+      
+      <!-- CEYLON Preloader Section  -->
       <div id="ceylon-preloader" class="ceylon-preloader-container">
         <!-- Background Video -->
         <video autoplay muted loop playsinline class="ceylon-video-background">
@@ -228,7 +234,6 @@
         })();
       </script>
       
-      <!-- CEYLON Preloader Section End -->
       <!-- Preloader End -->
 
       <!-- Main Header-->
@@ -237,7 +242,7 @@
           <div class="auto-container">
             <div class="inner clearfix">
               <div class="top-left clearfix">
-                
+               
               </div>
               <div class="top-right clearfix">
                
@@ -269,15 +274,14 @@
                   <nav class="main-menu">
                     <ul class="navigation clearfix">
                       <li class=""><a href="index.html">Home</a></li>
-
-                      <li class=""><a href="about.html">About Us</a></li>
+                      
+                      <li><a href="about.html">About Us</a></li>
                       <li class=""><a href="masters.html">Our Masters</a></li>
-                      <li class=""><a href="gallery.html">GALLERY</a></li>
+                      <li class="current"><a href="gallery.html">GALLERY</a></li>
 
-                      <li class="current">
-                        <a href="packages.html">Packages</a>
-                      </li>
 
+                      <li><a href="packages.html">packages</a></li>
+                  
                       <li><a href="contact-us.html">Contact</a></li>
                     </ul>
                   </nav>
@@ -329,6 +333,7 @@
               ><img
                 src="images/Ceylon-Hela-Logo.png"
                 alt=""
+                
             /></a>
           </div>
 
@@ -338,14 +343,17 @@
               <li class=""><a href="index.html">Home</a></li>
            
               <li><a href="about.html">About Us</a></li>
-              <li class="current"><a href="packages.html">package</a></li>
+              <li class=""><a href="masters.html">Our Masters</a></li>
+              <li class="current"><a href="gallery.html">GALLERY</a></li>
+
+
+              <li><a href="packages.html">package</a></li>
               
               <li><a href="contact-us.html">Contact</a></li>
             </ul>
           </div>
           <!-- /.Side-menu -->
 
-    
          
         </div>
         <!-- / Hidden Bar Wrapper -->
@@ -379,458 +387,585 @@
         </div>
       </section>
       <!--End Hidden Bar -->
+<section>
+    <style>
+       
+        
+        .gallery-section {
+            position: relative;
+            padding: 100px 0;
+            background-color: #121212;
+            overflow: hidden;
+            min-height: 100vh;
+        }
+        
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .video-background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+        
+        .video-background iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 100vh;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+        
+        .gallery-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-title {
+            margin-bottom: 50px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .section-title h2 {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .gallery-item {
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            background-color: #1a1a1a;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+        
+        .gallery-img {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gallery-img img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover .gallery-img img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        .filter-buttons {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .filter-button {
+            margin: 0 5px 10px;
+            padding: 8px 20px;
+            border-radius: 30px;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-button:hover, .filter-button.active {
+            background-color: #7e57c2;
+            color: white;
+            border-color: #7e57c2;
+        }
+        
+        @media (max-width: 767px) {
+            .video-background iframe {
+                height: 100%;
+                width: auto;
+            }
+        }
+    </style>
 
-      <!-- Inner Banner Section -->
-      <section class="inner-banner">
-        <div class="image-layer" style="background-image: url(images/main-slider/WhatsApp\ Image\ 2025-04-07\ at\ 11.54.12_82288e8c.jpg)"></div>
-        <div class="auto-container">
-          <div class="inner">
-            <div class="pattern-image">
-              <img src="images/icons/separator.svg" alt="" title="" />
+<section class="gallery-section">
+    <!-- YouTube Video Background -->
+   
+    
+    <div class="container gallery-content mt-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2 class="animate__animated animate__fadeInDown">Our Gallery</h2>
+                </div>
             </div>
-            <h1><span>Our packages</span></h1>
-          </div>
         </div>
-      </section>
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="filter-buttons animate__animated animate__fadeIn animate__delay-1s">
+                    <button class="filter-button active" data-filter="all">All</button>
+                    <button class="filter-button" data-filter="nature">Nature</button>
+                    <button class="filter-button" data-filter="architecture">Architecture</button>
+                    <button class="filter-button" data-filter="travel">Travel</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row gallery-container">
+            <!-- Gallery Item 1 -->
+            <div class="col-lg-4 col-md-6 gallery-item animate__animated animate__fadeInUp filter nature">
+                <div class="gallery-img">
+                    <img src="/images/background/IMG-20250407-WA0005.jpg" alt="Nature Image">
+                    <div class="gallery-caption">
+                        <h5>Beautiful Nature</h5>
+                        <p>A stunning view of mountains and lakes</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 2 -->
+            <div class="col-lg-4 col-md-6 gallery-item animate__animated animate__fadeInUp animate__delay-1s filter architecture">
+                <div class="gallery-img">
+                    <img src="/images/background/IMG-20250407-WA0006.jpg" alt="Architecture Image">
+                    <div class="gallery-caption">
+                        <h5>Modern Architecture</h5>
+                        <p>Contemporary building design</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 3 -->
+            <div class="col-lg-4 col-md-6 gallery-item animate__animated animate__fadeInUp animate__delay-2s filter travel">
+                <div class="gallery-img">
+                    <img src="/images/background/IMG-20250407-WA0007.jpg" alt="Travel Image">
+                    <div class="gallery-caption">
+                        <h5>Exotic Destination</h5>
+                        <p>Tropical paradise beach</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 4 -->
+            <div class="col-lg-4 col-md-6 gallery-item animate__animated animate__fadeInUp filter architecture">
+                <div class="gallery-img">
+                    <img src="/images/background/IMG-20250407-WA0008.jpg" alt="Architecture Image">
+                    <div class="gallery-caption">
+                        <h5>Historical Building</h5>
+                        <p>Ancient architecture and design</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 5 -->
+            <div class="col-lg-4 col-md-6 gallery-item animate__animated animate__fadeInUp animate__delay-1s filter nature">
+                <div class="gallery-img">
+                    <img src="/images/background/IMG-20250407-WA0009.jpg" alt="Nature Image">
+                    <div class="gallery-caption">
+                        <h5>Forest Scene</h5>
+                        <p>Peaceful forest with sunlight</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 6 -->
+            <div class="col-lg-4 col-md-6 gallery-item animate__animated animate__fadeInUp animate__delay-2s filter travel">
+                <div class="gallery-img">
+                    <img src="/images/background/IMG-20250407-WA0005.jpg" alt="Travel Image">
+                    <div class="gallery-caption">
+                        <h5>City Exploration</h5>
+                        <p>Urban landscape and cityscape</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function(){
+        // Filter gallery items
+        $(".filter-button").click(function(){
+            var value = $(this).attr('data-filter');
+            
+            $(".filter-button").removeClass("active");
+            $(this).addClass("active");
+            
+            if(value == "all") {
+                $(".filter").show("1000");
+            } else {
+                $(".filter").not("."+value).hide("1000");
+                $(".filter").filter("."+value).show("1000");
+            }
+        });
+        
+        // Add animation when items enter viewport
+        function animateOnScroll() {
+            $('.gallery-item').each(function() {
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                
+                if (bottom_of_window > bottom_of_object) {
+                    $(this).addClass('animate__animated animate__fadeInUp');
+                }
+            });
+        }
+        
+        // Initial check on page load
+        animateOnScroll();
+        
+        // Check on scroll
+        $(window).scroll(function() {
+            animateOnScroll();
+        });
+        
+        // YouTube API handling
+        // This ensures the video keeps playing even when out of view
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('video-background', {
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo();
+            event.target.mute();
+        }
+    });
+</script>
+</section>
+    
+    <style>
+      .sound-toggle {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+      }
+      
+      .sound-toggle:hover {
+        background: rgba(0, 0, 0, 0.7);
+      }
+      
+      .video-background {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      
+      #backgroundVideo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 0;
+      }
+    </style>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const video = document.getElementById('backgroundVideo');
+      const soundToggle = document.getElementById('soundToggle');
+      const soundOffIcon = document.getElementById('soundOffIcon');
+      const soundOnIcon = document.getElementById('soundOnIcon');
+      
+      // Function to attempt auto-unmute (might be blocked by browser)
+      const attemptAutoUnmute = function() {
+        // Create a user interaction promise
+        const userInteraction = new Promise((resolve) => {
+          // Listen for any user interaction with the page
+          const events = ['click', 'touchstart', 'keydown'];
+          const eventHandler = function() {
+            // Remove all event listeners once interaction happens
+            events.forEach(event => document.removeEventListener(event, eventHandler));
+            resolve();
+          };
+          // Add listeners for user interaction events
+          events.forEach(event => document.addEventListener(event, eventHandler));
+        });
+        
+        // Try to unmute after user interaction
+        userInteraction.then(() => {
+          video.muted = false;
+          updateSoundButtonState();
+        });
+        
+        // Also try to unmute immediately (works in some cases with user settings)
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            video.muted = false;
+            updateSoundButtonState();
+          }).catch(error => {
+            // Auto-unmute was blocked, waiting for user interaction
+            console.log('Auto-unmute was blocked, waiting for user interaction');
+          });
+        }
+      };
+      
+      // Function to update sound button UI
+      const updateSoundButtonState = function() {
+        if (video.muted) {
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+        } else {
+          soundOffIcon.style.display = 'none';
+          soundOnIcon.style.display = 'block';
+        }
+      };
+      
+      // Toggle sound when button is clicked
+      soundToggle.addEventListener('click', function() {
+        video.muted = !video.muted;
+        updateSoundButtonState();
+      });
+      
+      // Make sure video is playing
+      video.play().catch(error => {
+        console.log('Auto-play was prevented:', error);
+      });
+      
+      // Try to auto-unmute
+      attemptAutoUnmute();
+    });
+    </script>
+<!--End Banner Section -->
+
+<!-- Add this CSS to your stylesheet -->
+<style>
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.video-background video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.swiper-slide .content-box {
+  position: relative;
+  z-index: 2;
+}
+
+.sound-toggle {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sound-toggle:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+</style>
+
+<!-- Add this JavaScript to your script file or before closing body tag -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const video = document.getElementById('backgroundVideo');
+  const soundToggle = document.getElementById('soundToggle');
+  const soundOnIcon = document.getElementById('soundOnIcon');
+  const soundOffIcon = document.getElementById('soundOffIcon');
+  
+  // Force play the video (browsers might block it, but we try)
+  video.play().catch(function(error) {
+    console.log("Autoplay prevented: ", error);
+  });
+  
+  // Toggle sound function
+  soundToggle.addEventListener('click', function() {
+    video.muted = !video.muted;
+    
+    // Toggle icon display
+    if (video.muted) {
+      soundOnIcon.style.display = 'none';
+      soundOffIcon.style.display = 'block';
+    } else {
+      soundOnIcon.style.display = 'block';
+      soundOffIcon.style.display = 'none';
+    }
+  });
+  
+  // Initialize Swiper interaction with video
+  // This part should match how your Swiper is initialized
+  if (typeof Swiper !== 'undefined') {
+    const bannerSlider = new Swiper('.banner-slider', {
+      // Your existing Swiper options
+      on: {
+        slideChange: function() {
+          // If we move away from the first slide, pause the video
+          if (this.activeIndex !== 0) {
+            video.pause();
+          } else {
+            // If we come back to the first slide, play the video
+            video.play().catch(function(error) {
+              console.log("Autoplay prevented on slide return: ", error);
+            });
+          }
+        }
+      }
+    });
+  }
+  
+  // Make extra sure the video plays and loops
+  video.addEventListener('ended', function() {
+    video.play();
+  });
+  
+  // Try playing when the page gets focus
+  window.addEventListener('focus', function() {
+    if (document.querySelector('.swiper-slide-active .video-background')) {
+      video.play().catch(function(error) {
+        console.log("Autoplay prevented on focus: ", error);
+      });
+    }
+  });
+  
+  // Try playing when user interacts with the page
+  document.addEventListener('click', function() {
+    if (video.paused && document.querySelector('.swiper-slide-active .video-background')) {
+      video.play().catch(function(error) {
+        console.log("Autoplay prevented on click: ", error);
+      });
+    }
+  });
+});
+</script>
       <!--End Banner Section -->
 
-      <!--Chef Section-->
-      <section class="chef-section">
-        <div class="right-bg"><img src="" alt="" title="" /></div>
-        <div class="auto-container">
-          <div class="row clearfix">
-            <!--Col-->
-            <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
-              <div
-                class="inner wow fadeInLeft"
-                data-wow-duration="1500ms"
-                data-wow-delay="0ms"
-              >
-                <div class="">
-                  <img
-                    src="images/resource/WhatsApp_Image_2025-04-07_at_11.53.59_b578c166-removebg-preview.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <!--Col-->
-            <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
-              <div
-                class="inner clearfix wow fadeInRight"
-                data-wow-duration="1500ms"
-                data-wow-delay="0ms"
-              >
-                <div class="content-box">
-                  <div class="title-box">
-                    <div class="subtitle">
-                      <span>35 year of experience</span>
-                    </div>
-                    <div class="pattern-image">
-                      <img src="images/icons/separator.svg" alt="" title="" />
-                    </div>
-                    <h2>සතර සම්‍යක් ප්‍රධානයන්ගේ අභිවෘද්ධිය!.</h2>
-                    <div class="text">
-                      {උප්පන්නානං පාපකානං පහානාය වායාමො, අනුප්පන්නානං පාපකානං
-                      අනුප්පාදාය වායාමො, අනුප්පන්නානං කුසලානං උප්පාදාය වායාමො,
-                      උප්පන්නානං කුසලානං හීයො භාවාය වායාමො.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!--We Offer Section-->
 
-      <!--quote Section-->
-      <section class="intro-section quote">
+
+
+
+      <!--Intro Section-->
+      <section class="intro-section">
         <div
           class="image-layer"
-          style="
-            background-image: url(images/contact.jpg);
-          "
+          style="background-image: url(images/Ceylon-Hela-Logo.png)"
         ></div>
         <div class="auto-container">
           <div class="content-box">
-            <h3>
-              ජාතික ආරක්ෂාවේ සදාතනික තහවුරුබවට උපකාරී වන පෞරාණික හෙල සටන්
-              දර්ශණයෙන් විනිර්මුක්ත අංගං කරුවන්ගෙන් සුසැදි විශිෂ්ඨතම මානව සංචිතය
-              බවට පත්වීම.
-            </h3>
+            <div class="title-box centered">
+              <div class="subtitle"><span>amazing experience</span></div>
+              <div class="pattern-image">
+                <img src="images/icons/separator.svg" alt="" title="" />
+              </div>
+              <h2>Watch Our Video</h2>
+            </div>
+            <div class="play-btn">
+              <a
+                href="https://youtu.be/DzPD_RoTuFk?si=g62REz_8-VPwT04x"
+                class="lightbox-image theme-btn"
+                ><span class="icon fal fa-play"><svg xmlns="http://www.w3.org/2000/svg" class="ripple" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+</svg></span
+              ></a>
+            </div>
             <div class="separator"><span></span><span></span><span></span></div>
+            <h3>
+              
+pannala Ceylon Hela Art Pvt Ltd Angampora martial art school
+            </h3>
           </div>
-        </div>
-      </section>
 
-      <!--Team Section-->
-      <section class="team-section">
-        <div class="left-bg"><img src="" alt="" title="" /></div>
-        <div class="auto-container">
-          <div class="title-box centered">
-            <div class="subtitle"><span>Package Details</span></div>
-            <div class="pattern-image">
-              <img src="images/icons/separator.svg" alt="" title="" />
-            </div>
-            <h2>Package List</h2>
-          </div>
-          <div class="row justify-content-center clearfix">
-            <!--Block-->
-            <div class="team-block col-lg-4 col-md-6 col-sm-12">
-              <div
-                class="inner-box wow fadeInUp"
-                data-wow-duration="1500ms"
-                data-wow-delay="0ms"
-              >
-                <div class="image">
-                  <img
-                    src="images/main-slider/IMG-20250407-WA0034.jpg"
-                    alt=""
-                  />
-                  <div class="overlay-box"></div>
-                </div>
-                <h3><a href="">Drill</a></h3>
-                <div class="designation">12 months</div>
-                <div class="text desc">
-                  ancient fighting related Site visiting training workshops
-                </div>
-              </div>
-            </div>
-            <div class="team-block col-lg-4 col-md-6 col-sm-12">
-              <div
-                class="inner-box wow fadeInUp"
-                data-wow-duration="1500ms"
-                data-wow-delay="0ms"
-              >
-                <div class="image">
-                  <img
-                    src="images/main-slider/IMG-20250407-WA0034.jpg"
-                    alt=""
-                  />
-                  <div class="overlay-box"></div>
-                </div>
-                <h3><a href="">Ancient weapons training</a></h3>
-                <div class="text desc">
-                  full moon poya day leadership training workshops
-                </div>
-              </div>
-            </div>
-
-            <!--Block-->
-            <div class="team-block col-lg-4 col-md-6 col-sm-12">
-              <div
-                class="inner-box wow fadeInUp"
-                data-wow-duration="1500ms"
-                data-wow-delay="300ms"
-              >
-                <div class="image">
-                  <img
-                    src="images/main-slider/IMG-20250407-WA0034.jpg"
-                    alt=""
-                  />
-                  <div class="overlay-box"></div>
-                </div>
-                <h3><a href="">Norms practice</a></h3>
-                <div class="text desc">
-                  ancient traditional cultural &amp; customs training workshop
-                </div>
-              </div>
-            </div>
-
-            <!--Block-->
-            <div class="team-block col-lg-4 col-md-6 col-sm-12">
-              <div
-                class="inner-box wow fadeInUp"
-                data-wow-duration="1500ms"
-                data-wow-delay="300ms"
-              >
-                <div class="image">
-                  <img
-                    src="images/main-slider/IMG-20250407-WA0034.jpg"
-                    alt=""
-                  />
-                  <div class="overlay-box"></div>
-                </div>
-                <h3><a href="">Meditation practice</a></h3>
-                <div class="text desc">
-                  ancient traditional medication practice &amp; training
-                  workshop
-                </div>
-              </div>
-            </div>
-          </div>
+         
         </div>
       </section>
 
       
-        <style>
-          /* Scoped styles that only apply to our section */
-          #training-schedule-section * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Arial", sans-serif;
-          }
-
-          #training-schedule-section {
-            background-color: #121212;
-            color: #f0f0f0;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-          }
-
-          #training-schedule-section .container {
-            max-width: 1000px;
-            margin: 0 auto;
-          }
-
-          #training-schedule-section h2 {
-            text-align: center;
-            color: #00bcd4;
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #2d2d2d;
-          }
-
-          #training-schedule-section .schedule-info {
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 30px;
-            text-align: center;
-            border-left: 4px solid #00bcd4;
-          }
-
-          #training-schedule-section .day-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-          }
-
-          #training-schedule-section .day-card {
-            background-color: #1e1e1e;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
-            overflow: hidden;
-          }
-
-          #training-schedule-section .day-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-          }
-
-          #training-schedule-section .day-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #333;
-          }
-
-          #training-schedule-section .day-title {
-            font-size: 1.2rem;
-            color: #00bcd4;
-            font-weight: bold;
-          }
-
-          #training-schedule-section .special-offer {
-            background-color: #ff4081;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: bold;
-          }
-
-          #training-schedule-section .activity-list {
-            list-style-type: none;
-          }
-
-          #training-schedule-section .activity-item {
-            margin-bottom: 12px;
-            padding-left: 25px;
-            position: relative;
-            line-height: 1.5;
-          }
-
-          #training-schedule-section .activity-item::before {
-            content: "❖ }";
-            position: absolute;
-            left: 0;
-            color: #00bcd4;
-          }
-
-          @media (max-width: 768px) {
-            #training-schedule-section .day-cards {
-              grid-template-columns: 1fr;
-            }
-
-            #training-schedule-section .day-card {
-              margin-bottom: 15px;
-            }
-
-            #training-schedule-section h2 {
-              font-size: 1.5rem;
-            }
-          }
-        </style>
-
-        <!-- Our self-contained section with specific ID -->
-        <section id="training-schedule-section">
-          <div class="container">
-            <h2>ක්‍රියාකාරකම් සහිත පුහුණු සැලැස්ම</h2>
-
-            <div class="schedule-info">
-              <p>
-                සෑම දිනකම උදෑසන 08.00 වන හෝරාවේ සිට අපරභාග 05.00 දක්වා පුහුණු
-                සැසි පැවත්වෙන අතර දිවා ආහාර සහ කෙටි විවේක ලෙස පැය දෙකක කාලයක්
-                වෙන්වේ.
-              </p>
-            </div>
-
-            <div class="day-cards">
-              <!-- Day 1 -->
-              <div class="day-card">
-                <div class="day-header">
-                  <div class="day-title">01}- පළමු දිනය පළමු සතිය</div>
-                </div>
-                <ul class="activity-list">
-                  <li class="activity-item">
-                    බාහිර අභ්‍යන්තර හා ස්වසන වය්‍යායාම වල නිරත වීම.
-                  </li>
-                  <li class="activity-item">
-                    ශක්ති,නම්‍ය ,සුරම්‍ය,ප්‍රාණ,චිත්ත)
-                  </li>
-                  <li class="activity-item">
-                    පලමු දෙවන තුන්වන හතර වන අල්ලි පාදම් ක්‍රම පුහුනුව
-                  </li>
-                  <li class="activity-item">
-                    (අඩිමාරු) පහරදීම්,වැලැක්වීම, පැනිලි,බිම හෙලීම් පිලිබද
-                    ප්‍රායෝගික පුහුණුව (අත්පා පහරවල්)
-                  </li>
-                  <li class="activity-item">දේශන හා භාවනා වැඩසටහන්</li>
-                </ul>
-              </div>
-
-              <!-- Day 2 -->
-              <div class="day-card">
-                <div class="day-header">
-                  <div class="day-title">02}- දෙවනි දිනය පළමු සතිය</div>
-                  <div class="special-offer">Special OFFER 25%</div>
-                </div>
-                <ul class="activity-list">
-                  <li class="activity-item">
-                    බාහිර අභ්‍යන්තර හා ස්වසන වය්‍යායාම වල නිරත වීම.
-                  </li>
-                  <li class="activity-item">
-                    ශක්ති,නම්‍ය ,සුරම්‍ය,ප්‍රාණ,චිත්ත)
-                  </li>
-                  <li class="activity-item">
-                    ගැට වෙලුම් හරඹ පිලිබද ප්‍රායෝගික පුහුනුව
-                  </li>
-                  <li class="activity-item">
-                    හස්ථ චලන ( අත්සෙල්ලම්) කන්ඩායම් පුහුණුව
-                  </li>
-                  <li class="activity-item">
-                    බෙර පුහුනු වීම්, ශක්ති පරීක්ෂණ විජ්ජා පරීක්ෂණ ,ධර්ම පරීක්ෂණ.
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Day 3 -->
-              <div class="day-card">
-                <div class="day-header">
-                  <div class="day-title">03}- තෙවැනි දිනය දෙවන සතිය</div>
-                  <div class="special-offer">Special OFFER 30%</div>
-                </div>
-                <ul class="activity-list">
-                  <li class="activity-item">
-                    හෙළ හටනේ මර්මස්ථාන (නිල ක්‍රම) පාරම්පරික හෙළ වෙදකම පිලිබදව
-                    දැනුවත් කිරීම සහ පුහුණුව
-                  </li>
-                  <li class="activity-item">
-                    බාහිර අභ්‍යන්තර හා ස්වසන වය්‍යායාම වල නිරත වීම. ශක්ති,නම්‍ය
-                    ,සුරම්‍ය,ප්‍රාණ,චිත්ත
-                  </li>
-                  <li class="activity-item">ඉලංගම් හරඹ ( ආයුධ පුහුණුව )</li>
-                  <li class="activity-item">සමූහ අංගම් ශිල්ප ක්‍රම හැදෑරීම</li>
-                  <li class="activity-item">
-                    පිනුම් හා පැනුම් පිලිබද ප්‍රායෝගික පුහුණුව
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Day 4 -->
-              <div class="day-card">
-                <div class="day-header">
-                  <div class="day-title">04}- සිව්වන දිනය දෙවන සතිය</div>
-                  <div class="special-offer">Special OFFER 35%</div>
-                </div>
-                <ul class="activity-list">
-                  <li class="activity-item">ද්වන්ධ හරඹ</li>
-                  <li class="activity-item">
-                    බාහිර අභ්‍යන්තර හා ස්වසන වය්‍යායාම වල නිරත වීම.ශක්ති,නම්‍ය
-                    ,සුරම්‍ය,ප්‍රාණ,චිත්ත)
-                  </li>
-                  <li class="activity-item">
-                    යුගල වේලායුධ කඩු පළිහ හරඹ පුහුණුව.
-                  </li>
-                  <li class="activity-item">යුගල කඩු පළිහ හරඹ පුහුණුව.</li>
-                  <li class="activity-item">යුගල දිගු රිටි හරඹ පුහුණුව.</li>
-                  <li class="activity-item">යුගල කෙටි මුගුරු හරඹ පුහුණුව.</li>
-                  <li class="activity-item">යුගල හටන් සංදර්ශණ පුහුණුව.</li>
-                </ul>
-              </div>
-
-              <!-- Day 5 -->
-              <div class="day-card">
-                <div class="day-header">
-                  <div class="day-title">05} පස්වන දිනය තෙවන සතිය</div>
-                  <div class="special-offer">Special OFFER 45%</div>
-                </div>
-                <ul class="activity-list">
-                  <li class="activity-item">සමූහ / කන්ඩායම් හරඹ පුහුණුව.</li>
-                  <li class="activity-item">සමූහ කඩු හරඹ පුහුණුව.</li>
-                  <li class="activity-item">සමූහ දිගු රිටි හරඹ පුහුණුව.</li>
-                  <li class="activity-item">සමූහ පිහි හරඹ පුහුණුව.</li>
-                  <li class="activity-item">
-                    සමූහ කඩු රිටි මුගුරු පිහි සංදර්ශණ හරඹ පුහුණුව.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
 
       <!--Main Footer-->
       <style>
         /* Reset and general styles */
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
+       
         
-        body {
-          font-family: 'Arial', sans-serif;
-          line-height: 1.6;
-          color: #333;
-          min-height: 100vh;
-          display: flex;
-          flex-direction: column;
-        }
+        
         
         /* Sample content section (to demonstrate footer stays at bottom) */
-        .content {
-          flex: 1;
-          padding: 50px 20px;
-          background-color: #f5f5f5;
-        }
+        
         
         /* Footer styles */
         .footer {
@@ -984,10 +1119,10 @@
           <div class="footer-col">
             <h3>About Us</h3>
             <p>
-              Angampora is a traditional Sri Lankan martial art that emphasizes
-              self-defense, physical fitness, and mental discipline. It is
-              characterized by its unique techniques, including strikes,
-              grappling, and the use of various weapons. 
+              Ceylon Hela Art is dedicated to preserving and promoting Sri Lankan traditional heritage. This
+              business plan outlines our Angampora training programs, which combine self-defense,
+              fitness, mental discipline, and spiritual growth. In the future, we aim to introduce other Sri
+              Lankan traditional arts to the world.
             </p>
             <div class="social-links">
               <a href="https://www.facebook.com/share/18Y1FjKQCm/?mibextid=wwXIfr"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -1061,8 +1196,9 @@
     <script src="js/owl.js"></script>
     <script src="js/appear.js"></script>
     <script src="js/wow.js"></script>
+    <script src="js/parallax.min.js"></script>
     <script src="js/custom-script.js"></script>
   </body>
 
-  <!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/delici/all-demo/Delici-Defoult/our-chef.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Dec 2024 08:25:16 GMT -->
+  <!-- Mirrored from kalanidhithemes.com/live-preview/landing-page/delici/all-demo/Delici-Defoult/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Dec 2024 08:20:01 GMT -->
 </html>

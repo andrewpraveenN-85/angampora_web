@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Multi-Language Page</title>
+    
+    <style>
+        /* Custom header style */
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+        }
+        
+        /* Hide Google's floating banner (not recommended for public) */
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+            opacity: 0;
+        }
+        body {
+            top: 0px !important;
+        }
+        
+        /* Center content */
+        .content {
+            text-align: center;
+            margin: 40px auto;
+            max-width: 800px;
+            font-family: Arial, sans-serif;
+            padding: 0 20px;
+        }
+        
+        /* Translate dropdown styling */
+        #google_translate_element {
+            margin: 20px auto;
+            text-align: center;
+        }
+        
+        /* Language selector area */
+        .language-selector {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px auto;
+            max-width: 600px;
+        }
+        
+        /* Footer style */
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 15px;
+            background-color: #f1f1f1;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    🌍 Welcome to My Custom Multi-Language Page!
+</header>
+
+<div class="language-selector">
+    <p>Select your language: </p>
+    <div id="google_translate_element"></div>
+</div>
+
+<div class="content">
+    <h1>වෙබ් පිටුවට සාදරයෙන් පිළිගනිමු!</h1>
+    <p>මෙය සිංහල, දෙමළ සහ ඉංග්‍රීසි සඳහා භාෂා පරිවර්තනය කිරීමේ උපාංගයක් සමඟ යෙදුමකි.</p>
+    
+    <!-- Your entire website content goes here -->
+    <section>
+        <h2>වෙබ් අඩවියේ ප්‍රධාන අන්තර්ගතය</h2>
+        <p>මෙහි ඔබේ සම්පූර්ණ වෙබ් අඩවි අන්තර්ගතය ඇතුළත් කළ හැකිය. Google පරිවර්තන උපකරණය ඔබේ සම්පූර්ණ වෙබ් අඩවිය සිංහල, දෙමළ හෝ ඉංග්‍රීසි භාෂාවට පරිවර්තනය කරනු ඇත.</p>
+        
+        <p>ඔබ ඔබේ HTML සංස්කරණය කර ඔබේ වෙබ් අඩවියේ සියලුම පිටු සඳහා මෙම කේතය එකතු කිරීමෙන් ඔබට සියලුම පිටු සඳහා භාෂා පරිවර්තනය කිරීමේ හැකියාව ලබා දිය හැකිය.</p>
+        
+        <h3>භාෂා පරිවර්තන පහසුකම් ඇතුළත් කිරීමේ වාසි</h3>
+        <ul>
+            <li>ඔබේ වෙබ් අඩවිය ගෝලීය පරිශීලකයින්ට ප්‍රවේශ විය හැකිය</li>
+            <li>භාෂා බාධක අවම කරයි</li>
+            <li>Google Translate API භාවිතයෙන් ස්වයංක්‍රීය පරිවර්තනය</li>
+            <li>පහසු හා පරිශීලක හිතකාමී අතුරු මුහුණත</li>
+        </ul>
+    </section>
+    
+    <section>
+        <h2>තවත් අන්තර්ගතයක්</h2>
+        <p>මෙහි ඔබේ වෙබ් අඩවියට අවශ්‍ය වෙනත් ඕනෑම HTML අන්තර්ගතයක් ඇතුළත් කළ හැකිය. මෙය සියල්ල පරිවර්තනය කරනු ඇත.</p>
+        
+        <div style="background-color: #e9f7fe; padding: 15px; border-radius: 8px; margin: 20px 0;">
+            <h4>උදාහරණ:</h4>
+            <p>මෙම අන්තර්ගතය පවා පරිවර්තනය කරනු ඇත!</p>
+        </div>
+    </section>
+</div>
+
+<footer>
+    &copy; 2025 My Multi-Language Page. All rights reserved.
+</footer>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {
+                pageLanguage: 'si',
+                includedLanguages: 'si,ta,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            },
+            'google_translate_element'
+        );
+    }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
