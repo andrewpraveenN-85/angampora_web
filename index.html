@@ -253,7 +253,7 @@
     <!-- Preloader End -->
 
     <!-- Main Header-->
-    <header class="main-header header-down">
+    <header class="main-header header-down" style="color: #28282B;">
       <div id="google_translate_element"></div>
       <script type="text/javascript">
         function googleTranslateElementInit() {
@@ -709,192 +709,717 @@
     </script>
     <!--End Banner Section -->
 
-    <!--We Offer Section-->
-    <section class="we-offer-section" style="background-color:  	#28282B; border-radius: 15px; box-shadow: 0 2px  	#006241;">
-      <div class="left-bot-bg">
-        <img src="" alt="" title="" />
-      </div>
-      <div class="right-top-bg">
-        <img src="" alt="" title="" />
-      </div>
-      <div class="auto-container">
-        <div class="title-box centered">
-          <div class="subtitle"><span>HELA ARTS</span></div>
-          <div class="pattern-image">
-            <img src="images/icons/separator.svg" alt="" title="" />
+      <style>
+        /* Custom styles with matte black and Starbucks green */
+        :root {
+          --matte-black: #28282B;
+          --starbucks-green: #006241;
+        }
+        
+       
+        /* We Offer Section */
+        .we-offer-section {
+          background-color: var(--matte-black);
+          padding: 60px 0;
+          position: relative;
+          margin: 20px;
+          border-radius: 15px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+          border-bottom: 4px solid var(--starbucks-green);
+        }
+        
+        .we-offer-section .title-box h2 {
+          color: white;
+          margin-bottom: 15px;
+          position: relative;
+          padding-bottom: 15px;
+        }
+        
+        .we-offer-section .title-box h2:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80px;
+          height: 3px;
+          background-color: var(--starbucks-green);
+        }
+        
+        .we-offer-section .subtitle span {
+          color: var(--starbucks-green);
+          font-weight: bold;
+          letter-spacing: 2px;
+        }
+        
+        .we-offer-section .text {
+          color: #e0e0e0;
+          max-width: 800px;
+          margin: 0 auto;
+          line-height: 1.6;
+        }
+        
+        .offer-block .inner-box {
+          background-color: rgba(0, 0, 0, 0.3);
+          border-radius: 8px;
+          overflow: hidden;
+          transition: all 0.3s ease;
+          margin-top: 30px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .offer-block .inner-box:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+          border-color: var(--starbucks-green);
+        }
+        
+        .offer-block h3 {
+          padding: 15px;
+          text-align: center;
+          margin: 0;
+        }
+        
+        .offer-block h3 a {
+          color: white;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+        
+        .offer-block h3 a:hover {
+          color: var(--starbucks-green);
+        }
+        
+        .offer-block img {
+          width: 100%;
+          display: block;
+          transition: transform 0.5s ease;
+        }
+        
+        .offer-block .inner-box:hover img {
+          transform: scale(1.05);
+        }
+        
+        /* Story Section */
+        .story-section {
+          background-color: var(--matte-black);
+          padding: 60px 0;
+          position: relative;
+          margin: 20px;
+          border-radius: 15px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+          border-top: 4px solid var(--starbucks-green);
+        }
+        
+        .story-section .subtitle span {
+          color: var(--starbucks-green);
+          font-weight: bold;
+          letter-spacing: 2px;
+        }
+        
+        .story-section .text {
+          color: #e0e0e0;
+          line-height: 1.6;
+        }
+        
+        .story-section .images img {
+          width: 100%;
+          border-radius: 8px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+          border: 2px solid var(--starbucks-green);
+        }
+        
+        .theme-btn {
+          display: inline-block;
+          background-color: var(--starbucks-green);
+          color: white;
+          padding: 12px 28px;
+          border-radius: 4px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: all 0.3s ease;
+          margin-top: 20px;
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .theme-btn:hover {
+          background-color: #004c32;
+          box-shadow: 0 5px 15px rgba(0, 98, 65, 0.4);
+        }
+        
+        .btn-wrap {
+          position: relative;
+          display: block;
+        }
+        
+        .text-one, .text-two {
+          display: block;
+          transition: all 0.3s ease;
+        }
+        
+        .text-two {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+        }
+        
+        .theme-btn:hover .text-one {
+          transform: translateY(-100%);
+        }
+        
+        .theme-btn:hover .text-two {
+          transform: translateY(-100%);
+        }
+        
+        .auto-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 15px;
+        }
+        
+        .centered {
+          text-align: center;
+        }
+        
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0 -15px;
+        }
+        
+        [class*="col-"] {
+          padding: 0 15px;
+        }
+        
+        .justify-content-center {
+          justify-content: center;
+        }
+        
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        
+        @media (min-width: 768px) {
+          .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+          }
+        }
+        
+        @media (min-width: 992px) {
+          .col-lg-4 {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+          }
+          .col-lg-5 {
+            flex: 0 0 41.666667%;
+            max-width: 41.666667%;
+          }
+          .col-lg-7 {
+            flex: 0 0 58.333333%;
+            max-width: 58.333333%;
+          }
+        }
+        
+        @media (min-width: 1200px) {
+          .col-xl-4 {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+          }
+          .col-xl-5 {
+            flex: 0 0 41.666667%;
+            max-width: 41.666667%;
+          }
+          .col-xl-7 {
+            flex: 0 0 58.333333%;
+            max-width: 58.333333%;
+          }
+        }
+      </style>
+    
+      <!--We Offer Section-->
+      <section class="we-offer-section">
+        <div class="left-bot-bg">
+          <img src="" alt="" title="" />
+        </div>
+        <div class="right-top-bg">
+          <img src="" alt="" title="" />
+        </div>
+        <div class="auto-container">
+          <div class="title-box centered">
+            <div class="subtitle"><span>HELA ARTS</span></div>
+            <div class="pattern-image">
+              <img src="images/icons/separator.svg" alt="" title="" />
+            </div>
+            <h2>TENDON STRENGTH</h2>
+            <div class="text">
+              The Angampora practice exposes the practitioner to a variety of
+              unique and versatile training regimes. Intensity is imperative in
+              Angampora and the physical practices stress tendon strength and
+              mobility in favor of muscle size or strength.
+            </div>
           </div>
-          <h2 style="font-family: sans-serif;">TENDON STRENGTH</h2>
-          <div class="text">
-            The Angampora practice exposes the practitioner to a variety of
-            unique and versatile training regimes. Intensity is imperative in
-            Angampora and the physical practices stress tendon strength and
-            mobility in favor of muscle size or strength.
+          <div class="row justify-content-center clearfix">
+            <!--Block-->
+            <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
+                <div class="">
+                  <a href=""><img src="images/resource/offer-image-1.jpg" alt="" /></a>
+                </div>
+                <h3><a href="">රණ බෙර වාදනය</a></h3>
+              </div>
+            </div>
+    
+            <!--Block-->
+            <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
+                <div class="">
+                  <a href=""><img src="images/resource/offer-image-2.jpg" alt="" /></a>
+                </div>
+                <h3><a href="">අංගම්පොර</a></h3>
+              </div>
+            </div>
+    
+            <!--Block-->
+            <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
+                <div class="">
+                  <a href=""><img src="images/resource/offer-image-3.jpg" alt="" /></a>
+                </div>
+                <h3><a href="">පුහුණු ලාභීන්</a></h3>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row justify-content-center clearfix">
-          <!--Block-->
-          <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
-            <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
-              <div class="">
-                <a href=""><img src="images/resource/offer-image-1.jpg" alt="" /></a>
-              </div>
-              <h3><a href="">රණ බෙර වාදනය</a></h3>
-            </div>
-          </div>
-
-          <!--Block-->
-          <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
-            <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="300ms">
-              <div class="">
-                <a href=""><img src="images/resource/offer-image-2.jpg" alt="" /></a>
-              </div>
-              <h3><a href="">අංගම්පොර</a></h3>
-            </div>
-          </div>
-
-          <!--Block-->
-          <div class="offer-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
-            <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="600ms">
-              <div class="">
-                <a href=""><img src="images/resource/offer-image-3.jpg" alt="" /></a>
-              </div>
-              <h3><a href="">පුහුණු ලාභීන්</a></h3>
-            </div>
-          </div>
+      </section>
+    
+      <!--Story Section-->
+      <section class="story-section">
+        <div class="left-bg">
+          <img src="images/Ceylon-Hela-Logo.png" width="200px" alt="" title="" />
         </div>
-      </div>
-    </section>
-
-    <!--Story Section-->
-    <section class="story-section">
-      <div class="left-bg">
-        <img src="images/Ceylon-Hela-Logo.png" width="200px" alt="" title="" />
-      </div>
-      <div class="auto-container">
-        <div class="row clearfix">
-          <!--Col-->
-          <div class="text-col col-xl-5 col-lg-5 col-md-12 col-sm-12">
-            <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
-              <div class="title-box centered">
-                <div class="subtitle"><span>Our story</span></div>
-                <div class="pattern-image">
-                  <img src="images/icons/separator.svg" alt="" title="" />
+        <div class="auto-container">
+          <div class="row clearfix">
+            <!--Col-->
+            <div class="text-col col-xl-5 col-lg-5 col-md-12 col-sm-12">
+              <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                <div class="title-box centered">
+                  <div class="subtitle"><span>Our story</span></div>
+                  <div class="pattern-image">
+                    <img src="images/icons/separator.svg" alt="" title="" />
+                  </div>
+                  <!-- <h2>Every Flavor Tells a Story</h2> -->
+                  <div class="text">
+                    Angampora is the traditional martial art form that has been
+                    shrouded in secrecy since ancient times. Indigenous to Sri
+                    Lanka its roots stretch back over 5000 years - it was once a
+                    very integral part of the Sri Lankan way of life. It is a
+                    complete and holistic system, rooted in Buddhism, Hinduism
+                    and includes elements of Helaveda, meditation, music and
+                    astrology.
+                  </div>
                 </div>
-                <!-- <h2>Every Flavor Tells a Story</h2> -->
-                <div class="text">
-                  Angampora is the traditional martial art form that has been
-                  shrouded in secrecy since ancient times. Indigenous to Sri
-                  Lanka its roots stretch back over 5000 years - it was once a
-                  very integral part of the Sri Lankan way of life. It is a
-                  complete and holistic system, rooted in Buddhism, Hinduism
-                  and includes elements of Helaveda, meditation, music and
-                  astrology.
-                </div>
-              </div>
-              <div class="booking-info">
-                <div class="link-box">
-                  <a href="about.html" class="theme-btn btn-style-two clearfix">
-                    <span class="btn-wrap">
-                      <span class="text-one">Read More</span>
-                      <span class="text-two">Read More</span>
-                    </span>
-                  </a>
+                <div class="booking-info">
+                  <div class="link-box">
+                    <a href="about.html" class="theme-btn btn-style-two clearfix">
+                      <span class="btn-wrap">
+                        <span class="text-one">Read More</span>
+                        <span class="text-two">Read More</span>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!--Col-->
-          <div class="image-col col-xl-7 col-lg-7 col-md-12 col-sm-12">
-            <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
-              <div class="images parallax-scene-1">
-                <div class="image" data-depth="0.15">
-                  <img src="images/background/IMG-20250407-WA0008.jpg" alt="" />
+            <!--Col-->
+            <div class="image-col col-xl-7 col-lg-7 col-md-12 col-sm-12">
+              <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                <div class="images parallax-scene-1">
+                  <div class="image" data-depth="0.15">
+                    <img src="images/background/IMG-20250407-WA0008.jpg" alt="" />
+                  </div>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    
 
-    <section class="special-dish">
-
-      <div class="outer-container">
-        <div class="row clearfix">
-          <!--Col-->
-          <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
-            <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
-              <div class="image-layer" style="
-                    background-image: url(images/main-slider/ceo.jpg);
-                  "></div>
-
-            </div>
-          </div>
-          <!--Col-->
-          <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
-
-            <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
-              <div class="title-box">
-                <span class="badge-icon"><img src="images/resource/badge-2.png" alt="" title="" /></span>
-                <!-- <div class="subtitle"><span>Special dish</span></div> -->
-                <div class="pattern-image">
-                  <img src="images/icons/separator.svg" alt="" title="" />
-                </div>
-                <h4 style="font-family: sans-serif; font-size: 20px;">CEO - S.A Nalin Kumarasiri</h4>
-                <div class="text">
-                  Ceylon Hela Art is dedicated to preserving and promoting Sri Lankan traditional heritage. This
-                  business plan outlines our Angampora training programs, which combine self-defense,
-                  fitness, mental discipline, and spiritual growth. In the future, we aim to introduce other Sri
-                  Lankan traditional arts to the world.
+        <style>
+          /* Custom styles with matte black and Starbucks green */
+          :root {
+            --matte-black: #28282B;
+            --starbucks-green: #006241;
+          }
+          
+        
+          /* Story Section */
+          .story-section {
+            background-color: var(--matte-black);
+            padding: 60px 0;
+            position: relative;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-top: 4px solid var(--starbucks-green);
+          }
+          
+          .story-section .left-bg {
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            opacity: 0.7;
+          }
+          
+          .story-section .subtitle span {
+            color: var(--starbucks-green);
+            font-weight: bold;
+            letter-spacing: 2px;
+          }
+          
+          .story-section .text {
+            color: #e0e0e0;
+            line-height: 1.6;
+          }
+          
+          .story-section .images img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--starbucks-green);
+          }
+          
+          /* Special Dish Section */
+          .special-dish {
+            background-color: var(--matte-black);
+            padding: 0;
+            position: relative;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-left: 4px solid var(--starbucks-green);
+            overflow: hidden;
+          }
+          
+          .special-dish .image-col {
+            padding: 0;
+          }
+          
+          .special-dish .content-col {
+            padding: 40px;
+          }
+          
+          .special-dish .image-layer {
+            height: 100%;
+            min-height: 350px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+          }
+          
+          .special-dish .image-layer:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0));
+            border-left: 2px solid var(--starbucks-green);
+          }
+          
+          .special-dish h4 {
+            color: white;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 15px;
+          }
+          
+          .special-dish h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--starbucks-green);
+          }
+          
+          .special-dish .text {
+            color: #e0e0e0;
+            line-height: 1.6;
+          }
+          
+          .special-dish .badge-icon {
+            display: inline-block;
+            margin-bottom: 15px;
+            position: relative;
+          }
+          
+          .special-dish .badge-icon:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            border: 2px solid var(--starbucks-green);
+            opacity: 0.5;
+          }
+          
+          .special-dish .pattern-image {
+            margin: 15px 0;
+          }
+          
+          /* Common styles */
+          .theme-btn {
+            display: inline-block;
+            background-color: var(--starbucks-green);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+          }
+          
+          .theme-btn:hover {
+            background-color: #004c32;
+            box-shadow: 0 5px 15px rgba(0, 98, 65, 0.4);
+          }
+          
+          .btn-wrap {
+            position: relative;
+            display: block;
+          }
+          
+          .text-one, .text-two {
+            display: block;
+            transition: all 0.3s ease;
+          }
+          
+          .text-two {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+          }
+          
+          .theme-btn:hover .text-one {
+            transform: translateY(-100%);
+          }
+          
+          .theme-btn:hover .text-two {
+            transform: translateY(-100%);
+          }
+          
+          .auto-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+          }
+          
+          .outer-container {
+            width: 100%;
+          }
+          
+          .centered {
+            text-align: center;
+          }
+          
+          .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+          }
+          
+          [class*="col-"] {
+            padding: 0 15px;
+          }
+          
+          .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+          
+          /* Animation classes */
+          .wow {
+            visibility: visible;
+          }
+          
+          .fadeInLeft {
+            animation-name: fadeInLeft;
+            animation-duration: 1s;
+          }
+          
+          .fadeInRight {
+            animation-name: fadeInRight;
+            animation-duration: 1s;
+          }
+          
+          @keyframes fadeInLeft {
+            from {
+              opacity: 0;
+              transform: translateX(-30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+          
+          @keyframes fadeInRight {
+            from {
+              opacity: 0;
+              transform: translateX(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+          
+          /* Responsive styles */
+          @media (max-width: 991px) {
+            .special-dish .content-col {
+              padding: 30px;
+            }
+            
+            .special-dish .image-layer {
+              min-height: 300px;
+            }
+          }
+          
+          @media (max-width: 767px) {
+            .story-section {
+              padding: 40px 0;
+            }
+            
+            .special-dish {
+              border-left: none;
+              border-top: 4px solid var(--starbucks-green);
+            }
+            
+            .special-dish .image-layer {
+              min-height: 250px;
+            }
+          }
+          
+          @media (min-width: 768px) {
+            .col-md-12 {
+              flex: 0 0 100%;
+              max-width: 100%;
+            }
+          }
+          
+          @media (min-width: 992px) {
+            .col-lg-5 {
+              flex: 0 0 41.666667%;
+              max-width: 41.666667%;
+            }
+            .col-lg-6 {
+              flex: 0 0 50%;
+              max-width: 50%;
+            }
+            .col-lg-7 {
+              flex: 0 0 58.333333%;
+              max-width: 58.333333%;
+            }
+          }
+          
+          @media (min-width: 1200px) {
+            .col-xl-5 {
+              flex: 0 0 41.666667%;
+              max-width: 41.666667%;
+            }
+            .col-xl-6 {
+              flex: 0 0 50%;
+              max-width: 50%;
+            }
+            .col-xl-7 {
+              flex: 0 0 58.333333%;
+              max-width: 58.333333%;
+            }
+          }
+        </style>
+      
+      
+        <!-- CEO Section -->
+        <section class="special-dish">
+          <div class="outer-container">
+            <div class="row clearfix">
+              <!--Col-->
+              <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                  <div class="image-layer" style="background-image: url(images/main-slider/ceo.jpg);"></div>
                 </div>
               </div>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="special-dish">
-
-      <div class="outer-container">
-        <div class="row clearfix">
-          <!--Col-->
-          <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
-            <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
-              <div class="image-layer" style="
-                    background-image: url(images/resource/WhatsApp_Image_2025-04-07_at_11.53.59_b578c166-removebg-preview.png);
-                  "></div>
-
-            </div>
-          </div>
-          <!--Col-->
-          <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
-
-            <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
-              <div class="title-box">
-                <span class="badge-icon"><img src="images/resource/badge-2.png" alt="" title="" /></span>
-                <!-- <div class="subtitle"><span>Special dish</span></div> -->
-                <div class="pattern-image">
-                  <img src="images/icons/separator.svg" alt="" title="" />
-                </div>
-                <h4 style="font-family: sans-serif; font-size: 20px;">DIRECTOR - N.C Warnakula arachchige</h4>
-                <div class="text">
-                  Ceylon Hela Art is dedicated to preserving and promoting Sri Lankan traditional heritage. This
-                  business plan outlines our Angampora training programs, which combine self-defense,
-                  fitness, mental discipline, and spiritual growth. In the future, we aim to introduce other Sri
-                  Lankan traditional arts to the world.
+              <!--Col-->
+              <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                  <div class="title-box">
+                    <span class="badge-icon"><img src="images/resource/badge-2.png" alt="" title="" /></span>
+                    <div class="pattern-image">
+                      <img src="images/icons/separator.svg" alt="" title="" />
+                    </div>
+                    <h4>CEO - S.A Nalin Kumarasiri</h4>
+                    <div class="text">
+                      Ceylon Hela Art is dedicated to preserving and promoting Sri Lankan traditional heritage. This
+                      business plan outlines our Angampora training programs, which combine self-defense,
+                      fitness, mental discipline, and spiritual growth. In the future, we aim to introduce other Sri
+                      Lankan traditional arts to the world.
+                    </div>
+                  </div>
                 </div>
               </div>
-
-
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
+        </section>
+      
+        <!-- Director Section -->
+        <section class="special-dish">
+          <div class="outer-container">
+            <div class="row clearfix">
+              <!--Col-->
+              <div class="image-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
+                  <div class="image-layer" style="background-image: url(images/resource/WhatsApp_Image_2025-04-07_at_11.53.59_b578c166-removebg-preview.png);"></div>
+                </div>
+              </div>
+              <!--Col-->
+              <div class="content-col col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
+                  <div class="title-box">
+                    <span class="badge-icon"><img src="images/resource/badge-2.png" alt="" title="" /></span>
+                    <div class="pattern-image">
+                      <img src="images/icons/separator.svg" alt="" title="" />
+                    </div>
+                    <h4>DIRECTOR - N.C Warnakula arachchige</h4>
+                    <div class="text">
+                      Ceylon Hela Art is dedicated to preserving and promoting Sri Lankan traditional heritage. This
+                      business plan outlines our Angampora training programs, which combine self-defense,
+                      fitness, mental discipline, and spiritual growth. In the future, we aim to introduce other Sri
+                      Lankan traditional arts to the world.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      
 
     <!--Menu Section-->
 
